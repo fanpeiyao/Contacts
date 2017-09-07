@@ -24,10 +24,9 @@
         <div class="md-toolbar-tools">
 
             <!-- Left aligned menu below button -->
-            <button class="mdl-button mdl-js-button mdl-button&#45;&#45;icon mdl-js-ripple-effect" ng-click="showSearch()">
-                <i class="material-icons" >search</i>
+            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="material-icons">search</i>
             </button>
-
         </div>
     </md-toolbar>
 
@@ -35,18 +34,23 @@
     <div  class="manList">
 
         <!--搜索-->
-        <md-autocomplete md-no-cache="true"
-                         md-selected-item="selectedItem"
-                         md-search-text="searchText" md-items="item in search"
-                         placeholder="search"
-                         md-item-text="item.name" class='fadeInDownBig' ng-class="{'show':flag == true,'hide':flag != true}">
-            <md-item-template>
-                <span md-highlight-text="searchText">{{item.name}}</span>
-            </md-item-template>
-            <md-not-found>
-                No states matching "{{searchText}}" were found.
-            </md-not-found>
-        </md-autocomplete>
+        <!--<md-autocomplete md-no-cache="true"-->
+                         <!--md-selected-item="selectedItem"-->
+                         <!--md-search-text="searchText"md-input-name="searchText"-->
+                         <!--placeholder="search"-->
+                         <!--md-item-text="item.name">-->
+            <!--<md-item-template>-->
+                <!--<span  md-highlight-text="searchText">{{item.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found>-->
+                <!--您搜索"{{searchText}}" 没有找到。-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+        <md-input-container md-no-float class="md-block">
+            <input type="text" ng-model="searchText" id="input-0" placeholder="搜索">
+            <!--<i class="material-icons close"  style="position: absolute;right: 0;" ng-click="clear()">close</i>-->
+        </md-input-container>
+
 
 
 

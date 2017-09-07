@@ -17,6 +17,12 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             }
         }
 
+        var inp=document.getElementById("input-0").value;
+        $scope.clear=function () {
+           inp.value="";
+
+        }
+
         ManService.then(function (result) {
             var users=result.data.dateList;
             var newUser = [];
@@ -28,18 +34,16 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             };
 
             //实现查询功能
-            var inp=document.getElementById("input-0");
-            inp.addEventListener("click",function(){
                 $scope.$watch('searchText', function(searchText) {
                     if(searchText===""){
                         $scope.users=$filter("filter")(newUser);
                     }else{
-                        $scope.users=$filter("filter")(newUser,searchText);
-                        $scope.search=$filter("filter")(users,searchText);
+                        var abc=$filter("filter")(users,searchText);
+                        $scope.users=ABCSort(abc);
+                        console.log( $scope.users);
+
                     }
                 });
-            })
-
         })
 
     }])
