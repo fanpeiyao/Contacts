@@ -127,7 +127,9 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
     left: 59px;
     top: 150px;
 }
-
+.padding-bottom{
+    padding-bottom:30px;
+}
 @keyframes overlay {
     0% {
         visibility: visible;
