@@ -44,6 +44,7 @@ body .manList .list-item {
 .list-detail{
     position: fixed;
     flex-flow: column wrap;
+    background: #fff;
     top: 50%;
     left: 50%;
     width: 100%;
@@ -69,6 +70,15 @@ body .manList .list-item {
     height: 220px;
     width:100%;
     margin-bottom: 9px;
+}
+
+.list-detail .md-card-image.avatar{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    top: 50px;
+    border-radius: 50%;
+    left: 35%;
 }
 .list-detail .list-de-con{
     width:100%;
@@ -124,8 +134,8 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 .list-detail .mdl-card__title-text{
     color: #fff;
     position: absolute;
-    left: 59px;
-    top: 150px;
+    left: 30px;
+    top: 175px;
 }
 .padding-bottom{
     padding-bottom:30px;
