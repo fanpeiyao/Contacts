@@ -51,22 +51,16 @@
 
 
         <md-content class="md-padding" layout-xs="column" layout="row">
-            <div class="demo-list-icon mdl-list newList" >
-                <div style="position:relative;" class="mdl-list__item" ng-repeat="sorts in users">
-                    <span style="position: absolute;top: 0;display: block;">{{sorts.sorts}}</span>
-                    <ul class="demo-list-icon mdl-list newList">
-                        <li class="mdl-list__item fadeInUpBig" ng-repeat="user in sorts.details" list-active data-id="active_{{user.id}}">
-                    <span class="mdl-list__item-primary-content">
-                        {{user.name}}
 
-                    </span>
-                            <img ng-src="{{user.photo}}" class="md-card-image">
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
+            <md-list flex ng-repeat="sorts in users">
+                <md-subheader class="md-no-sticky" style="color: #FF4181;">{{sorts.sorts}}</md-subheader>
+                <md-list-item class="md-2-line fadeInUpBig" ng-repeat="user in sorts.details"  list-active data-id="active_{{user.id}}">
+                    <div class="md-list-item-text" layout="column">
+                        <p>{{user.name}}</p>
+                    </div>
+                    <img ng-src="{{user.photo}}" class="md-avatar"  style="margin-right:0;"/>
+                </md-list-item>
+            </md-list>
 
             <!--详细内容-->
             <div ng-repeat="user in users">
