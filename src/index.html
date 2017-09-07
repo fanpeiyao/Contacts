@@ -51,6 +51,15 @@
 
 
         <md-content class="md-padding" layout-xs="column" layout="row">
+            <md-list flex ng-repeat="sorts in users">
+                <md-subheader class="md-no-sticky" style="color: #FF4181;">{{sorts.sorts}}</md-subheader>
+                <md-list-item class="md-2-line fadeInUpBig" ng-repeat="user in sorts.details"  list-active data-id="active_{{user.id}}">
+                    <div class="md-list-item-text" layout="column">
+                        <p>{{user.name}}</p>
+                    </div>
+                    <img ng-src="{{user.photo}}" class="md-avatar"  style="margin-right:0;"/>
+                </md-list-item>
+            </md-list>
             <div class="demo-list-icon mdl-list newList" >
                 <div style="position:relative;" class="mdl-list__item" ng-repeat="sorts in users">
                     <span style="position: absolute;top: 0;display: block;" ng-bind="sorts.sorts"></span>
