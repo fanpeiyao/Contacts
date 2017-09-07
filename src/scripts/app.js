@@ -7,7 +7,15 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var de = document.getElementById(id);
             de.setAttribute('class','list-detail')
         }
-
+        $scope.flag = false;
+        $scope.showSearch = function () {
+            if ($scope.flag === true) {
+                $scope.flag = false;
+            }
+            else {
+                $scope.flag = true;
+            }
+        }
 
         ManService.then(function (result) {
             var users=result.data.dateList;
