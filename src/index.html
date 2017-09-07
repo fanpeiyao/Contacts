@@ -34,28 +34,33 @@
     <div  class="manList">
 
         <!--搜索-->
-        <md-autocomplete md-no-cache="true"
-                         md-selected-item="selectedItem"
-                         md-search-text="searchText" md-items="item in search"
-                         placeholder="search"
-                         md-item-text="item.name">
-            <md-item-template>
-                <span md-highlight-text="searchText" ng-bind="item.name"></span>
-            </md-item-template>
-            <md-not-found>
-                No states matching "{{searchText}}" were found.
-            </md-not-found>
-        </md-autocomplete>
+        <!--<md-autocomplete md-no-cache="true"-->
+                         <!--md-selected-item="selectedItem"-->
+                         <!--md-search-text="searchText"md-input-name="searchText"-->
+                         <!--placeholder="search"-->
+                         <!--md-item-text="item.name">-->
+            <!--<md-item-template>-->
+                <!--<span  md-highlight-text="searchText">{{item.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found>-->
+                <!--您搜索"{{searchText}}" 没有找到。-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+        <md-input-container md-no-float class="md-block">
+            <input type="text" ng-model="searchText" id="input-0" placeholder="搜索">
+            <!--<i class="material-icons close"  style="position: absolute;right: 0;" ng-click="clear()">close</i>-->
+        </md-input-container>
+
 
 
 
 
         <md-content class="md-padding" layout-xs="column" layout="row">
             <md-list flex ng-repeat="sorts in users" style="position: relative;">
-                <md-subheader class="md-no-sticky" style="color: #FF4181;position: absolute;left: -6px;margin-top: 13px;">{{sorts.sorts}}</md-subheader>
+                <md-subheader class="md-no-sticky" style="color: #FF4181;position: absolute;margin-top: 13px;">{{sorts.sorts}}</md-subheader>
                 <md-list-item class="md-2-line fadeInUpBig" ng-repeat="user in sorts.details"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
-                        <p style="padding-left:16px;">{{user.name}}</p>
+                        <p>{{user.name}}</p>
                     </div>
                     <img ng-src="{{user.photo}}" class="md-avatar"  style="margin-right:0;"/>
                 </md-list-item>
