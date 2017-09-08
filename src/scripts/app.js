@@ -7,6 +7,21 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var de = document.getElementById(id);
             de.setAttribute('class','list-detail')
         }
+        $scope.on_clear=function () {
+            $scope.searchText='';
+            $scope.clickIcon = false;
+        }
+
+
+        $scope.clickIcon = false;
+        $scope.showSearch = function() {
+            if ($scope.clickIcon === false) {
+                $scope.clickIcon = true;
+            }
+            else {
+                $scope.clickIcon = false;
+            }
+        };
 
 
         ManService.then(function (result) {
@@ -17,6 +32,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
              **********************/
 
             var imgList=[];
+            imgList.push("resource/images/cover.jpg");
             for(var i=0;i<users.length;i++){
                 imgList.push(users[i].photo);
             }
@@ -29,7 +45,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     $("#loading").hide();
                     $("#coverPic").fadeIn(1000);
                 }
-                setTimeout(function(){ $('#cover').fadeOut(1000); },3000);
+                $timeout(function(){ $('#cover').fadeOut(1000); },3000);
             });
 
             /*********************
@@ -39,24 +55,28 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var newUser = [];
             $scope.users = [];
             newUser = ABCSort(users);
+            // console.log(newUser)
+            // console.log($scope.users);
+
             for (var i=0;i<newUser.length;i++){
-                $timeout(function () {
+                // console.log(newUser[i])
+                // $timeout(function () {
                     $scope.users.push(newUser[i]);
-                }, 1000 * i);
+                //     console.log($scope.users)
+                // }, 100 * i);
 
             };
 
             //实现查询功能
 
-                $scope.$watch('searchText', function(searchText) {
-                    if(searchText===""){
-                        $scope.users=$filter("filter")(newUser);
-                    }else{
-                        var abc=$filter("filter")(users,searchText);
-                        $scope.users=ABCSort(abc);
-
-                    }
-                });
+            $scope.$watch('searchText', function(searchText) {
+                if(searchText===""){
+                    $scope.users=$filter("filter")(newUser);
+                }else{
+                    var abc=$filter("filter")(users,searchText);
+                    $scope.users=ABCSort(abc);
+                }
+            });
 
         })
 
