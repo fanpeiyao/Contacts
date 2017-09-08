@@ -19,9 +19,21 @@
 <body ng-app="myApp" >
 <!--page content -->
 <div  ng-controller="ManCtrl">
+    <div id="cover" >
+        <div id="loading">
+            <span id="percent">0%</span>
+            <img src="resource/images/loading.png" alt="">
+        </div>
+        <img style="display:none;" id="coverPic" src="resource/images/cover.jpg" alt="">
+    </div>
 
     <md-toolbar class="toolbar mdl-shadow--2dp">
         <div class="md-toolbar-tools">
+            <!-- Left aligned menu below button -->
+<!--             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+                <i class="material-icons">search</i>
+            </button> -->
+
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable width100">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="input-0">
                     <i class="material-icons">search</i>
@@ -180,8 +192,10 @@
     </div>
 </div>
 
-<script src="scripts/material.min.js"></script>
 <script src="assets/js/angular.min.js"></script>
+<script src="scripts/material.min.js"></script>
+<script src="scripts/jquery-2.1.1.min.js"></script>
+<script src="scripts/imgLoader.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/PinYin.js"></script>
 <script src="scripts/directive.js"></script>
