@@ -200,3 +200,26 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
     100%{opacity:1;
         -moz-transform:translateY(0)}
 }
+.fadeIn{
+    -webkit-animation:fadeIn 1s .2s ease both;
+    -moz-animation:fadeIn 1s .2s ease both;}
+@-webkit-keyframes fadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+@-moz-keyframes fadeIn{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+.fadeOut{
+    -webkit-animation:fadeOut 1s .2s ease both;
+    -moz-animation:fadeOut 1s .2s ease both;}
+
+@-webkit-keyframes fadeOut{
+    0%{opacity:1}
+    100%{opacity:0}
+}
+@-moz-keyframes fadeOut{
+    0%{opacity:1}
+    100%{opacity:0}
+}

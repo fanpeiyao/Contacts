@@ -17,11 +17,11 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             }
         }
 
-        var inp=document.getElementById("input-0").value;
-        $scope.clear=function () {
-           inp.value="";
-
-        }
+        // var inp=document.getElementById("input-0").value;
+        // $scope.clear=function () {
+        //    inp.value="";
+        //
+        // }
 
         ManService.then(function (result) {
             var users=result.data.dateList;
