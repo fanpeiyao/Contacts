@@ -124,8 +124,11 @@ body .manList .list-item {
 .marginBottom{
     margin-bottom:6px;
 }
-.list-detail .width100{
+.width100{
     width:100%
+}
+.width90{
+    width:90%
 }
 .list-detail .card-border{
     border-bottom: 1px solid rgba(0,0,0,.1);
