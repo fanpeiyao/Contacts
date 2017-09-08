@@ -21,12 +21,6 @@ ng-md-icon > svg {
     -o-transition: width 750ms ease-in-out, height 750ms ease-in-out;
     transition: width 750ms ease-in-out, height 750ms ease-in-out;
 }
-body .manList .list-item {
-    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/*新样式*/
 .mdui-p-l-2{
     padding-left:16px;
 }
@@ -36,6 +30,12 @@ body .manList .list-item {
 .manList{
     padding-top: 56px;
 }
+body .manList .list-item {
+    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/*新样式*/
+
 .mdl-list .mdl-list__item img{
     height: 66px;
     border-radius:50%;
@@ -158,16 +158,16 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 .listBox .md-avatar{
     margin-right:0;
 }
-.show{
-    display: block;
-    margin-top: 0;
-}
-.hide{
-    display: none;
-    margin-top:-40px ;
-    -webkit-animation:fadeOut 1s .2s ease both;
-    -moz-animation:fadeOut 1s .2s ease both;
-}
+/*.show{*/
+    /*display: block;*/
+    /*margin-top: 0;*/
+/*}*/
+/*.hide{*/
+    /*display: none;*/
+    /*margin-top:-40px ;*/
+    /*-webkit-animation:fadeOut 1s .2s ease both;*/
+    /*-moz-animation:fadeOut 1s .2s ease both;*/
+/*}*/
 
 .fadeInUpBig{
     -webkit-animation:fadeInUpBig 1s .2s ease both;
@@ -222,4 +222,8 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 @-moz-keyframes fadeOut{
     0%{opacity:1}
     100%{opacity:0}
+}
+
+md-content::-webkit-scrollbar {
+    display: none;
 }

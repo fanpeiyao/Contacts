@@ -1,5 +1,5 @@
 var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
-    .controller("ManCtrl",["$scope","ManService","$filter",function ($scope,ManService,$filter) {
+    .controller("ManCtrl",["$scope","ManService","$filter",'$timeout',function ($scope,ManService,$filter,$timeout) {
 
         // 样式
         $scope.closeDe = function (id) {
@@ -7,30 +7,18 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var de = document.getElementById(id);
             de.setAttribute('class','list-detail')
         }
-        $scope.flag = false;
-        $scope.showSearch = function () {
-            if ($scope.flag === true) {
-                $scope.flag = false;
-            }
-            else {
-                $scope.flag = true;
-            }
-        }
 
-        // var inp=document.getElementById("input-0").value;
-        // $scope.clear=function () {
-        //    inp.value="";
-        //
-        // }
 
         ManService.then(function (result) {
             var users=result.data.dateList;
             var newUser = [];
             $scope.users = [];
-            $scope.search;
             newUser = ABCSort(users);
             for (var i=0;i<newUser.length;i++){
-                $scope.users.push(newUser[i]);
+                $timeout(function () {
+                    $scope.users.push(newUser[i]);
+                }, 1000 * i);
+
             };
 
             //实现查询功能

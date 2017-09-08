@@ -38,11 +38,11 @@
     <div  class="manList">
 
         <md-content class="md-padding" layout-xs="column" layout="row">
-            <md-list flex ng-repeat="sorts in users" class="listBox">
-                <md-subheader class="md-no-sticky" >{{sorts.sorts}}</md-subheader>
+            <md-list flex ng-repeat="sorts in users track by $index " class="listBox">
+                <md-subheader class="md-no-sticky  fadeInUpBig" ng-class="animation" >{{sorts.sorts}}</md-subheader>
 
 
-                <md-list-item class="md-2-line fadeInUpBig list-item " ng-click="null" ng-repeat="user in sorts.details"  list-active data-id="active_{{user.id}}">
+                <md-list-item class="md-2-line list-item fadeInUpBig"  ng-click="null" ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
                         <p   class="userName">{{user.name}}</p>
                     </div>
@@ -53,8 +53,8 @@
             </md-list>
 
             <!--详细内容-->
-            <div ng-repeat="user in users">
-                <secition class="list-detail" id="active_{{i.id}}"  ng-repeat="i in user.details" >
+            <div ng-repeat="user in users track by $index">
+                <secition class="list-detail" id="active_{{i.id}}"  ng-repeat="i in user.details  track by $index" >
                     <i class="material-icons close" ng-click="closeDe(i.id)">keyboard_arrow_down</i>
                     <h2 class="mdl-card__title-text" ng-bind="i.name"></h2>
 
