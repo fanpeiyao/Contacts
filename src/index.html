@@ -10,8 +10,8 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/styles/angular-material.min.css">
-    <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/material.min.css">
+    <link rel="stylesheet" href="style/index.css">
 
 </head>
 
@@ -29,38 +29,39 @@
 
     <md-toolbar class="toolbar mdl-shadow--2dp">
         <div class="md-toolbar-tools">
-
             <!-- Left aligned menu below button -->
-            <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
+<!--             <button class="mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect">
                 <i class="material-icons">search</i>
-            </button>
+            </button> -->
 
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable width100">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="input-0">
+                    <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder width90" >
+                    <input class="mdl-textfield__input" type="text" ng-model="searchText" id="input-0" placeholder="搜索">
+                    <label class="mdl-textfield__label" >Expandable Input</label>
+                </div>
+            </div>
         </div>
     </md-toolbar>
 
 
     <div  class="manList">
 
-        <!--搜索-->
-        <md-input-container md-no-float class="md-block">
-            <input type="text" ng-model="searchText" id="input-0" placeholder="搜索">
-            <!--<i class="material-icons close fadeIn"  style="position: absolute;right: 0;" ng-click="clear()">close</i>-->
-        </md-input-container>
-
-
-
-
-
-
         <md-content class="md-padding" layout-xs="column" layout="row">
             <md-list flex ng-repeat="sorts in users" class="listBox">
                 <md-subheader class="md-no-sticky" >{{sorts.sorts}}</md-subheader>
-                <md-list-item class="md-2-line fadeInUpBig list-item"  ng-repeat="user in sorts.details"  list-active data-id="active_{{user.id}}">
+
+
+                <md-list-item class="md-2-line fadeInUpBig list-item " ng-click="null" ng-repeat="user in sorts.details"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
                         <p   class="userName">{{user.name}}</p>
                     </div>
                     <img ng-src="{{user.photo}}" class="md-avatar" />
                 </md-list-item>
+
+
             </md-list>
 
             <!--详细内容-->
