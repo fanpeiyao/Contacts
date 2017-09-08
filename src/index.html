@@ -9,8 +9,8 @@
     <title>网金花名册</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link rel="stylesheet" href="assets/styles/angular-material.min.css">
+    <link rel="stylesheet" href="style/material.min.css">
     <link rel="stylesheet" href="style/index.css">
 
 </head>
@@ -22,19 +22,11 @@
 
     <md-toolbar class="toolbar mdl-shadow--2dp">
         <div class="md-toolbar-tools">
-
-            <!-- Left aligned menu below button -->
-            <!--<button class="mdl-button mdl-js-button mdl-button&#45;&#45;icon mdl-js-ripple-effect">-->
-                <!--<i class="material-icons">search</i>-->
-            <!--</button>-->
-
-
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable width100">
                 <label class="mdl-button mdl-js-button mdl-button--icon" for="input-0">
                     <i class="material-icons">search</i>
                 </label>
                 <div class="mdl-textfield__expandable-holder width90" >
-                    <!--<input  type="text" id="sample6">-->
                     <input class="mdl-textfield__input" type="text" ng-model="searchText" id="input-0" placeholder="搜索">
                     <label class="mdl-textfield__label" >Expandable Input</label>
                 </div>
@@ -44,29 +36,6 @@
 
 
     <div  class="manList">
-
-        <!--搜索-->
-        <!--<md-autocomplete md-no-cache="true"-->
-                         <!--md-selected-item="selectedItem"-->
-                         <!--md-search-text="searchText"md-input-name="searchText"-->
-                         <!--placeholder="search"-->
-                         <!--md-item-text="item.name">-->
-            <!--<md-item-template>-->
-                <!--<span  md-highlight-text="searchText">{{item.name}}</span>-->
-            <!--</md-item-template>-->
-            <!--<md-not-found>-->
-                <!--您搜索"{{searchText}}" 没有找到。-->
-            <!--</md-not-found>-->
-        <!--</md-autocomplete>-->
-        <!--<md-input-container md-no-float class="md-block">-->
-            <!--<input type="text" ng-model="searchText" id="input-0" placeholder="搜索">-->
-            <!--&lt;!&ndash;<i class="material-icons close"  style="position: absolute;right: 0;" ng-click="clear()">close</i>&ndash;&gt;-->
-        <!--</md-input-container>-->
-
-
-
-
-
 
         <md-content class="md-padding" layout-xs="column" layout="row">
             <md-list flex ng-repeat="sorts in users" class="listBox">
@@ -211,7 +180,7 @@
     </div>
 </div>
 
-<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+<script src="scripts/material.min.js"></script>
 <script src="assets/js/angular.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/PinYin.js"></script>
