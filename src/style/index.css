@@ -25,6 +25,31 @@ body .manList .list-item {
     -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
+/*封面图片预加载  start  */
+#cover{width:100%;height:100%;position:fixed;z-index:9999999;background-color:#e3f5fb;}
+#cover #coverPic{width:100%;height: 100%;}
+#loading{width:100px;height:100px;position:absolute;left:50%;margin-left:-50px;top:50%;margin-top:-50px;}
+#loading>img{width:100px;height:100px;-webkit-animation:loading 1s ease infinite;animation:loading 1s ease infinite;}
+#loading #percent{position:absolute;left:20%;top:41%;font-size:24px;color:#1296db;display: inline-block;width: 60px;text-align: center;}
+
+@keyframes loading {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform:rotate(0deg);
+    }
+    100% {
+        -webkit-transform:rotate(360deg);
+    }
+}
+
+/*封面样式  end  */
 
 /*新样式*/
 .mdui-p-l-2{
