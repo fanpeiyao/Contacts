@@ -55,17 +55,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var newUser = [];
             $scope.users = [];
             newUser = ABCSort(users);
-            // console.log(newUser)
-            // console.log($scope.users);
-
-            for (var i=0;i<newUser.length;i++){
-                // console.log(newUser[i])
-                // $timeout(function () {
-                    $scope.users.push(newUser[i]);
-                //     console.log($scope.users)
-                // }, 100 * i);
-
-            };
+            // for (var i=0;i<newUser.length;i++){
+            //     console.log(newUser[i])
+            //     $timeout(function () {
+            //         $scope.users.push(newUser[i]);
+            //         console.log($scope.users)
+            //     }, 100 * i);
+            //
+            // };
 
             //实现查询功能
 
