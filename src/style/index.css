@@ -58,8 +58,11 @@ body .manList .list-item {
 .demo-list-icon {
     width: 100%;
 }
-.manList{
+/*.manList{
     padding-top: 56px;
+}*/
+md-content md-list:first-child{
+    margin-top: 56px;
 }
 md-content::-webkit-scrollbar {
     display: none;
