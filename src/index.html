@@ -57,7 +57,7 @@
             </md-list>
 
             <!--详细内容-->
-            <div ng-repeat="user in users track by $index">
+            <div ng-repeat="user in users track by $index" class="secitionBox">
                 <secition class="list-detail" id="active_{{i.id}}"  ng-repeat="i in user.details  track by $index" >
                     <i class="material-icons close" ng-click="closeDe(i.id)">close</i>
                     <h2 class="mdl-card__title-text" ng-bind="i.name"></h2>

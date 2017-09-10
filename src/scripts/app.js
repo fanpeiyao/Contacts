@@ -5,7 +5,9 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         $scope.closeDe = function (id) {
             var id = 'active_'+id;
             var de = document.getElementById(id);
-            de.setAttribute('class','list-detail')
+            de.setAttribute('class','list-detail');
+            var bar = document.getElementsByClassName('toolbar')[0];
+            bar.style.display='block';
         }
         $scope.on_clear=function () {
             $scope.searchText='';

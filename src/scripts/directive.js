@@ -12,7 +12,11 @@ angular.module('myApp')
                     var ty = $window.innerHeight/2 - element[0].offsetTop -4;
                     angular.element(this).attr('style',"transform: translateY(" + ty + "px)");
                     var de = document.getElementById(detail_target);
-                    de.setAttribute('class','active list-detail')
+                    de.setAttribute('class','active list-detail');
+                    //暂时
+                    var bar = document.getElementsByClassName('toolbar')[0];
+                    bar.style.display='none';
+
                     angular.element(this).find('.md-card-image').addClass('aa');
                 })
             }
