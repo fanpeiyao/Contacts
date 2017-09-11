@@ -1,5 +1,14 @@
 var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
-    .controller("ManCtrl",["$scope","ManService","$filter",'$timeout',function ($scope,ManService,$filter,$timeout) {
+    .controller("ManCtrl",["$scope","ManService","$filter",'$timeout','$window',function ($scope,ManService,$filter,$timeout,$window) {
+
+        console.log($window.innerHeight)
+        // var con = angular.element('.content');
+        // con.css('min-height',$window.innerHeight);
+        var con = document.getElementsByClassName('content')[0];
+        console.log(con)
+        con.style.minHeight=$window.innerHeight +'px';
+        console.log(con.style.minHeight)
+
 
         // 样式
         $scope.closeDe = function (id) {
