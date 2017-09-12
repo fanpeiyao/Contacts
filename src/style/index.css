@@ -346,3 +346,21 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 .width0{
     width:0;
 }
+md-chips{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: auto;
+}
+.md-chips, md-chips .md-chips {
+    box-shadow: none;
+    padding: 0;
+}
+.md-chips md-chip {
+    height: 1.6em;
+    line-height: 1.6em;
+    font-size: 14px;
+    left: -50px;
+    margin: 4px 0 0 0;
+    color: rgba(0,0,0,0.54);
+}

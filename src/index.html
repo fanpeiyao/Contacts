@@ -46,10 +46,13 @@
                 <md-subheader class="md-no-sticky  fadeInUpBig" ng-class="animation" >{{sorts.sorts}}</md-subheader>
 
 
-                <md-list-item class="md-2-line list-item fadeInUpBig"  ng-click="null" ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
+                <md-list-item class="md-2-line list-item fadeInUpBig"  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
-                        <p   class="userName">{{user.name}}</p>
+                        <p   class="userName" ng-bind="user.name"></p>
                     </div>
+                    <md-chips>
+                        <md-chip ng-bind="user.groupName"></md-chip>
+                    </md-chips>
                     <img ng-src="{{user.photo}}" class="md-avatar" />
                 </md-list-item>
 
