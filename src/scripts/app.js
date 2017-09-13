@@ -50,35 +50,46 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     $("#loading").hide();
                     $("#coverPic").fadeIn(1000);
                 }
-                $timeout(function(){ $('#cover').fadeOut(1000); },3000);
+                $timeout(function(){
+                    $('#cover').fadeOut(1000);
+                    loadData();
+
+
+
+                },3000);
             });
 
             /*********************
              图片预加载 end
              **********************/
 
-            var newUser = [];
-            $scope.users = [];
-            newUser = ABCSort(users);
-            // for (var i=0;i<newUser.length;i++){
-            //     console.log(newUser[i])
-            //     $timeout(function () {
-            //         $scope.users.push(newUser[i]);
-            //         console.log($scope.users)
-            //     }, 100 * i);
-            //
-            // };
+            function loadData() {
+                var newUser = [];
+                $scope.users = [];
+                newUser = ABCSort(users);
+                for (var i=0;i<newUser.length;i++){
+                    $timeout((function () {
+                        $scope.users.push(newUser[i]);
+                    })(i), 100 * i);
+                };
 
-            //实现查询功能
-
-            $scope.$watch('searchText', function(searchText) {
-                if(searchText===""){
-                    $scope.users=$filter("filter")(newUser);
-                }else{
-                    var abc=$filter("filter")(users,searchText);
-                    $scope.users=ABCSort(abc);
+                var lists = document.getElementsByTagName('md-list'),time;
+                for(var i= 0;i<lists.length;i++){
+                    time = (i*100)+'ms';
+                    lists[i].style.animationDelay = time;
                 }
-            });
+
+                //实现查询功能
+                $scope.$watch('searchText', function(searchText) {
+                    if(searchText===""){
+                        $scope.users=$filter("filter")(newUser);
+                        loadData();
+                    }else{
+                        var abc=$filter("filter")(users,searchText);
+                        $scope.users=ABCSort(abc);
+                    }
+                });
+            }
 
         })
 

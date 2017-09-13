@@ -9,21 +9,9 @@ p,ul,h1,h2,h3,h4,h5,h6,ol,dl,dt,dd,pre,li,form,input,select,textarea{
     list-style:none;
 }
 
-ng-md-icon {
-    -webkit-transition: fill 750ms ease-in-out;
-    -moz-transition: fill 750ms ease-in-out;
-    -o-transition: fill 750ms ease-in-out;
-    transition: fill 750ms ease-in-out;
-}
-ng-md-icon > svg {
-    -webkit-transition: width 750ms ease-in-out, height 750ms ease-in-out;
-    -moz-transition: width 750ms ease-in-out, height 750ms ease-in-out;
-    -o-transition: width 750ms ease-in-out, height 750ms ease-in-out;
-    transition: width 750ms ease-in-out, height 750ms ease-in-out;
-}
 body .manList .list-item {
-    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    /*-webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);*/
+    /*transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);*/
 }
 /*封面图片预加载  start  */
 #cover{width:100%;height:100%;position:fixed;z-index:9999999;background-color:#e3f5fb;}
@@ -204,7 +192,15 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 
 .fadeInUpBig{
     -webkit-animation:fadeInUpBig 1s .2s ease both;
-    -moz-animation:fadeInUpBig 1s .2s ease both;}
+    -moz-animation:fadeInUpBig 1s .2s ease both;
+}
+/*@for $i from 1 through length(9){*/
+    /*md-list>md-list-item:nth-child(#{$i}){*/
+        /*animation-delay: (100 * $i)s;*/
+        /*-moz-animation-delay: -2s;*/
+        /*-webkit-animation-delay: -2s;*/
+    /*}*/
+/*}*/
 @-webkit-keyframes fadeInUpBig{
     0%{opacity:0;
         -webkit-transform:translateY(2000px)}
@@ -359,9 +355,10 @@ md-chips{
 .md-chips md-chip {
     height: 1.6em;
     line-height: 1.6em;
-    font-size: 14px;
+    font-size: 12px;
     left: -50px;
     background:transparent;
     margin: 4px 10px 0 0;
     color: rgba(0, 0, 0, 0.4);
 }
+
