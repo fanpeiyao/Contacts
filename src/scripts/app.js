@@ -53,9 +53,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 $timeout(function(){
                     $('#cover').fadeOut(1000);
                     loadData();
-
-
-
                 },3000);
             });
 
@@ -68,9 +65,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 $scope.users = [];
                 newUser = ABCSort(users);
                 for (var i=0;i<newUser.length;i++){
-                    $timeout((function () {
-                        $scope.users.push(newUser[i]);
-                    })(i), 100 * i);
+                    $scope.users.push(newUser[i]);
                 };
 
                 var lists = document.getElementsByTagName('md-list'),time;
@@ -83,7 +78,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 $scope.$watch('searchText', function(searchText) {
                     if(searchText===""){
                         $scope.users=$filter("filter")(newUser);
-                        loadData();
                     }else{
                         var abc=$filter("filter")(users,searchText);
                         $scope.users=ABCSort(abc);
