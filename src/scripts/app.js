@@ -63,10 +63,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             function loadData() {
                 var newUser = [];
                 $scope.users = [];
-                newUser = ABCSort(users);
+               // newUser = ABCSort(users);
+                var timeStr="groupName";
+                newUser =strSort(users,timeStr);
+                console.log(newUser);
                 var lists = document.getElementsByTagName('md-list'),time;
-                console.log(newUser.length)
-                console.log(lists.length)
+
+                //console.log(lists.length)
                 for (var i=0;i<newUser.length;i++){
                     $scope.users.push(newUser[i]);
                     //Cannot read property 'style' of undefined,本来lists[i]应该单独写循环，虽报错不影响
@@ -76,14 +79,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
 
                 //实现查询功能
-                $scope.$watch('searchText', function(searchText) {
-                    if(searchText===""){
-                        $scope.users=$filter("filter")(newUser);
-                    }else{
-                        var abc=$filter("filter")(users,searchText);
-                        $scope.users=ABCSort(abc);
-                    }
-                });
+                // $scope.$watch('searchText', function(searchText) {
+                //     if(searchText===""){
+                //         $scope.users=$filter("filter")(newUser);
+                //     }else{
+                //         var abc=$filter("filter")(users,searchText);
+                //         $scope.users=ABCSort(abc);
+                //     }
+                // });
             }
 
         })

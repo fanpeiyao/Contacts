@@ -29,6 +29,18 @@
 
     <md-toolbar class="toolbar mdl-shadow--2dp">
         <div class="md-toolbar-tools">
+
+            <button id="demo-menu-lower-left"
+                    class="mdl-button mdl-js-button mdl-button--icon">
+                <i class="material-icons">more_vert</i>
+            </button>
+
+            <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+                for="demo-menu-lower-left">
+                <li class="mdl-menu__item">按组分</li>
+                <li class="mdl-menu__item">ABC</li>
+            </ul>
+
             <div class="search-widget qp-ui qp-ui-search-input searchBox" ng-class="{'width80':clickIcon,'width0':!clickIcon}">
                 <button class="search-button" ng-click="showSearch()"><i class="material-icons">search</i></button>
                 <button class="search-close-button"  ng-class="{'showClose':clickIcon,'hide':!clickIcon}"><i class="material-icons" ng-click="on_clear()">close</i></button>

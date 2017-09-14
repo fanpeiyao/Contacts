@@ -168,10 +168,14 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
     position: relative;
 }
 .listBox .md-no-sticky{
-    color: #FF4181;
+    /*color: #FF4181;
     position: absolute;
     left: -6px;
-    margin-top: 13px;
+    margin-top: 13px;*/
+    background: #f7f6f6;
+}
+.listBox .md-no-sticky .md-subheader-inner{
+    padding:5px 16px !important;
 }
 .listBox .userName{
     padding-left:16px;
