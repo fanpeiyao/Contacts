@@ -64,15 +64,16 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 var newUser = [];
                 $scope.users = [];
                 newUser = ABCSort(users);
+                var lists = document.getElementsByTagName('md-list'),time;
+                console.log(newUser.length)
+                console.log(lists.length)
                 for (var i=0;i<newUser.length;i++){
                     $scope.users.push(newUser[i]);
-                };
-
-                var lists = document.getElementsByTagName('md-list'),time;
-                for(var i= 0;i<lists.length;i++){
+                    //Cannot read property 'style' of undefined,本来lists[i]应该单独写循环，虽报错不影响
                     time = (i*100)+'ms';
                     lists[i].style.animationDelay = time;
-                }
+                };
+
 
                 //实现查询功能
                 $scope.$watch('searchText', function(searchText) {
