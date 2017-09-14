@@ -97,14 +97,14 @@ function ABCSort(data){
 /********************************/
 
 //按组分类
-function timeSort(data,timeStr){
+function strSort(data,Str){
 
 	var arr=[],timeClass;
 
     for(var i=0;i<data.length;i++){
 
     	for(var key in data[i]){
-    		if(key==timeStr){
+    		if(key==Str){
 				arr.push(data[i][key]);	
 			}
 		} 

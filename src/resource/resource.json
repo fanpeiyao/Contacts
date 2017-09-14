@@ -52,23 +52,25 @@
       "nativePlace":"杭州",
       "maritalStatus":"否"
 
-    }, {
+    },  {
       "id":4,
       "name": "王萌",
-      "birthday": "09月09日",
-      "mobile":"13456789045",
-      "email":"fanpeiyao@gyj.com",
-      "telephone":"0571-86509999",
-      "weixin":"lirug0713",
-      "experience":[{"time":"2016.10-至今","company":"上海思芮有限公司","post":"前端开发"}],
+      "birthday": "9月9日",
+      "mobile":"15658116968",
+      "email":"wangmeng@gyj.com",
+      "telephone":"无",
+      "weixin":"15658116968",
+      "experience":[{"time":"2016.6-至今","company":"交易银行中心","post":"前端开发"},
+        {"time":"2014.5-2016.5","company":"青岛青软","post":"前端开发"}],
       "groupName":"研发三组",
       "post":"前端开发",
       "photo":"resource/images/wm-2.jpg",
       "photoBg":"resource/images/wm-1.jpg",
-      "interest":"爱好1、爱好2",
+      "interest":"爬山",
       "liveArea":"下城区",
-      "nativePlace":"杭州",
-      "maritalStatus":"否"
+      "nativePlace":"保定 Baoding",
+      "maritalStatus":"否",
+      "team":3
     },{
       "id":5,
       "name": "詹利康",
