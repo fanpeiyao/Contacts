@@ -72,24 +72,24 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">call</i>
                             <span class="marginLeft">
-                        <div class="color-normal marginBottom" ng-bind="i.mobile"></div>
-                        <div class="color-gary">Mobile</div>
-                    </span>
+                                <div class="color-normal marginBottom" ng-bind="i.mobile"></div>
+                                <div class="color-gary">Mobile</div>
+                            </span>
                         </div>
                         <div class="mdl-card__actions  card-son">
-                    <span class="width100  card-border card-span">
-                        <div  class="color-normal marginBottom" ng-bind="i.telephone"></div>
-                        <div class="color-gary">Work</div>
-                    </span>
+                            <span class="width100  card-border card-span">
+                                <div  class="color-normal marginBottom" ng-bind="i.telephone"></div>
+                                <div class="color-gary">Work</div>
+                            </span>
                         </div>
 
                         <!--邮件区域-->
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">mail</i>
                             <span class="marginLeft">
-                        <div class="color-normal marginBottom"  ng-bind="i.email"></div>
-                        <div class="color-gary">Email</div>
-                    </span>
+                                <div class="color-normal marginBottom"  ng-bind="i.email"></div>
+                                <div class="color-gary">Email</div>
+                            </span>
                         </div>
                         <div class="mdl-card__actions  card-son newcard-son">
                             <span class="width100  card-border card-span"></span>
@@ -99,9 +99,9 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">person</i>
                             <span class="marginLeft">
-                        <div class="color-normal marginBottom" ng-bind="i.post"></div>
-                        <div class="color-gary" ng-bind="i.groupName"></div>
-                    </span>
+                                <div class="color-normal marginBottom" ng-bind="i.post"></div>
+                                <div class="color-gary" ng-bind="i.groupName"></div>
+                            </span>
                         </div>
                         <div class="mdl-card__actions  card-son newcard-son">
                             <span class="width100  card-border card-span"></span>
@@ -110,42 +110,44 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">work</i>
                             <span class="marginLeft">
-                        <div class="color-normal marginBottom" ng-bind="i.experience[0].company"></div>
-                        <div class="color-gary" ng-bind="i.experience[0].time"></div>
-                    </span>
+                                <div class="color-normal marginBottom" ng-bind="i.experience[0].company"></div>
+                                <div class="color-gary" ng-bind="i.experience[0].time"></div>
+                            </span>
                         </div>
-                        <div class="mdl-card__actions  card-son">
-                    <span class="width100  card-border card-span">
-                        <div  class="color-normal marginBottom" ng-bind="i.telephone"></div>
-                        <div class="color-gary">Work</div>
-                    </span>
+                        <div class="mdl-card__actions  card-son" ng-repeat="n in i.experience"  ng-if="$index>0">
+                            <span class="width100  card-border card-span">
+                                <div  class="color-normal marginBottom" ng-bind="n.company"></div>
+                                <div class="color-gary" ng-bind="n.time"></div>
+                            </span>
                         </div>
-
+                        <div class="mdl-card__actions  card-son newcard-son" ng-if="$index=0">
+                            <span class="width100  card-border card-span"></span>
+                        </div>
                         <!--基本信息-->
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">favorite</i>
                             <span class="marginLeft">
-                        <div class="color-normal marginBottom" ng-bind="i.nativePlace"></div>
-                        <div class="color-gary">籍贯</div>
-                    </span>
+                                <div class="color-normal marginBottom" ng-bind="i.nativePlace"></div>
+                                <div class="color-gary">籍贯</div>
+                            </span>
                         </div>
                         <div class="mdl-card__actions  card-son">
-                    <span class="width100   card-span">
-                        <div  class="color-normal marginBottom" ng-bind="i.interest"></div>
-                        <div class="color-gary">爱好</div>
-                    </span>
+                            <span class="width100   card-span">
+                                <div  class="color-normal marginBottom" ng-bind="i.interest"></div>
+                                <div class="color-gary">爱好</div>
+                            </span>
                         </div>
                         <div class="mdl-card__actions  card-son">
-                    <span class="width100   card-span">
-                        <div  class="color-normal marginBottom" ng-bind="i.maritalStatus"></div>
-                        <div class="color-gary">是否单身</div>
-                    </span>
+                            <span class="width100   card-span">
+                                <div  class="color-normal marginBottom" ng-bind="i.maritalStatus"></div>
+                                <div class="color-gary">是否单身</div>
+                            </span>
                         </div>
                         <div class="mdl-card__actions  card-son">
-                    <span class="width100  card-border card-span">
-                        <div  class="color-normal marginBottom" ng-bind="i.weixin"></div>
-                        <div class="color-gary">微信号</div>
-                    </span>
+                            <span class="width100  card-border card-span">
+                                <div  class="color-normal marginBottom" ng-bind="i.weixin"></div>
+                                <div class="color-gary">微信号</div>
+                            </span>
                         </div>
 
 
@@ -154,9 +156,9 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">place</i>
                             <span class="marginLeft">
-                        <div class="color-normal marginBottom">{{i.liveArea}}</div>
-                        <div class="color-gary">居住范围</div>
-                    </span>
+                                <div class="color-normal marginBottom">{{i.liveArea}}</div>
+                                <div class="color-gary">居住范围</div>
+                            </span>
                         </div>
 
                     </div>
