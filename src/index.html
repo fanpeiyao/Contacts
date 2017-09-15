@@ -42,10 +42,10 @@
     <div  class="manList">
 
         <md-content class="md-padding content"  layout-xs="column" layout="row" >
-            <md-list flex ng-repeat="sorts in users track by $index " class="listBox fadeInUpBig">
-                <md-subheader class="md-no-sticky " ng-class="animation" >{{sorts.sorts}}</md-subheader>
+            <md-list flex ng-repeat="sorts in users track by $index " class="listBox ">
+                <md-subheader class="md-no-sticky son-list fadeInUpBig"  >{{sorts.sorts}}</md-subheader>
 
-                <md-list-item class="md-2-line list-item "  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
+                <md-list-item class="md-2-line list-item son-list fadeInUpBig"  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
                         <p   class="userName" ng-bind="user.name"></p>
                     </div>
