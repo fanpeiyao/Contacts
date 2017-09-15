@@ -85,7 +85,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                 });
             }
-
             //排序切换
             $(".switchSort").click(function(){
                 var flag=$(this).attr("sort");
