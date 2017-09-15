@@ -90,8 +90,28 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             $(".switchSort").click(function(){
                 var flag=$(this).attr("sort");
                 if(flag=="groupName"){
-                    $scope.users=strSort(users,flag);
-                    console.log($scope.users)
+                    var data= strSort(users,flag);
+                    var datalist=[];
+                    for(var i=0;i<data.length;i++){
+                        datalist.push(data[i].details[0].team)
+                    }
+                    function sortarr(arrlist,dataSort){
+                        for(i=0;i<arrlist.length-1;i++){
+                            for(j=0;j<arrlist.length-1-i;j++){
+                                if(arrlist[j]>arrlist[j+1]){
+                                    var temp=arrlist[j];
+                                    arrlist[j]=arrlist[j+1];
+                                    arrlist[j+1]=temp;
+
+                                    var sortdata=dataSort[j];
+                                    dataSort[j]=dataSort[j+1];
+                                    dataSort[j+1]=sortdata;
+                                }
+                            }
+                        }
+                        return dataSort;
+                    }
+                    $scope.users=sortarr(datalist,data);
                 }
                 if(flag=="ABC"){
                     $scope.users=ABCSort(users);
@@ -100,5 +120,4 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             })
 
         })
-
     }])

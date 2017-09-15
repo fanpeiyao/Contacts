@@ -15,7 +15,8 @@
     "interest":"摄影、旅游",
     "liveArea":"拱墅区",
     "nativePlace":"杭州 HangZhou",
-    "maritalStatus":"否"
+    "maritalStatus":"否",
+    "team":3
   },{
     "id":2,
     "name": "范佩瑶",
@@ -32,7 +33,8 @@
     "interest":"猫、笑话",
     "liveArea":"下城区",
     "nativePlace":"山西 ShanXi",
-    "maritalStatus":"是"
+    "maritalStatus":"是",
+    "team":3
   },
     {
       "id":3,
@@ -50,7 +52,8 @@
       "interest":"打游戏、看电影",
       "liveArea":"下城区",
       "nativePlace":"杭州",
-      "maritalStatus":"否"
+      "maritalStatus":"否",
+      "team":3
 
     },  {
       "id":4,
@@ -80,14 +83,15 @@
       "email":"fanpeiyao@gyj.com",
       "weixin":"liru0713",
       "experience":[{"time":"2016.10-至今","company":"上海思芮有限公司","post":"java开发"}],
-      "groupName":"研发三组",
+      "groupName":"研发二组",
       "post":"java开发",
       "photo":"resource/images/zlk.jpg",
       "photoBg":"resource/images/bg.jpg",
       "interest":"爱好1、爱好2",
       "liveArea":"下城区",
       "nativePlace":"杭州",
-      "maritalStatus":"否"
+      "maritalStatus":"否",
+      "team":2
     },{
       "id":6,
       "name": "邱普",
@@ -98,14 +102,15 @@
       "weixin":"ling0713",
       "experience":[{"time":"2016.10-至今","company":"上海思芮有限公司","post":"java开发"},
         {"time":"2015.09-2016.10","company":"八朗","post":"java开发"}],
-      "groupName":"研发三组",
+      "groupName":"研发二组",
       "post":"java开发",
       "photo":"resource/images/qp.jpg",
       "photoBg":"resource/images/bg.jpg",
       "interest":"爱好1、爱好2",
       "liveArea":"下城区",
       "nativePlace":"杭州",
-      "maritalStatus":"否"
+      "maritalStatus":"否",
+      "team":2
     },{
       "id":7,
       "name": "楼晗芝",
@@ -122,7 +127,8 @@
       "interest":"购物、瑜伽",
       "liveArea":"城东",
       "nativePlace":"义乌 YiWu",
-      "maritalStatus":"否"
+      "maritalStatus":"否",
+      "team":3
     },{
       "id":8,
       "name": "韩燕飞",
@@ -139,7 +145,8 @@
       "interest":"看书",
       "liveArea":"城西",
       "nativePlace":"临安 LinAn",
-      "maritalStatus":"否"
+      "maritalStatus":"否",
+      "team":3
     },{
       "id":9,
       "name": "陈涛",
@@ -156,7 +163,8 @@
       "interest":"羽毛球、骑自行车、搓炉石、旅行、看美女",
       "liveArea":"朝晖",
       "nativePlace":"嘉兴 JiaXing",
-      "maritalStatus":"否"
+      "maritalStatus":"否",
+      "team":3
     }
   ]
 }
