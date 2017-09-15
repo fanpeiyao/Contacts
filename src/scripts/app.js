@@ -63,12 +63,9 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             function loadData() {
                 var newUser = [];
                 $scope.users = [];
-               // newUser = ABCSort(users);
-                var timeStr="groupName";
-                newUser =strSort(users,timeStr);
-                console.log(newUser);
+                newUser = ABCSort(users);
                 var lists = document.getElementsByTagName('md-list'),time;
-
+                //console.log(newUser.length)
                 //console.log(lists.length)
                 for (var i=0;i<newUser.length;i++){
                     $scope.users.push(newUser[i]);
@@ -79,15 +76,28 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
 
                 //实现查询功能
-                // $scope.$watch('searchText', function(searchText) {
-                //     if(searchText===""){
-                //         $scope.users=$filter("filter")(newUser);
-                //     }else{
-                //         var abc=$filter("filter")(users,searchText);
-                //         $scope.users=ABCSort(abc);
-                //     }
-                // });
+                $scope.$watch('searchText', function(searchText) {
+                    if(searchText===""){
+                        $scope.users=$filter("filter")(newUser);
+                    }else{
+                        var abc=$filter("filter")(users,searchText);
+                        $scope.users=ABCSort(abc);
+                    }
+                });
             }
+
+            //排序切换
+            $(".switchSort").click(function(){
+                var flag=$(this).attr("sort");
+                if(flag=="groupName"){
+                    $scope.users=strSort(users,flag);
+                    console.log($scope.users)
+                }
+                if(flag=="ABC"){
+                    $scope.users=ABCSort(users);
+                    console.log($scope.users)
+                }
+            })
 
         })
 

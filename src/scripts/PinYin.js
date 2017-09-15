@@ -97,14 +97,14 @@ function ABCSort(data){
 /********************************/
 
 //按组分类
-function strSort(data,timeStr){
+function strSort(data,Str){
 
 	var arr=[],timeClass;
 
     for(var i=0;i<data.length;i++){
 
     	for(var key in data[i]){
-    		if(key==timeStr){
+    		if(key==Str){
 				arr.push(data[i][key]);	
 			}
 		} 
@@ -116,21 +116,7 @@ function strSort(data,timeStr){
 			arrlist.push(arr[i]);
 		}
 	}
-
-    function sortarr(arrlist){
-        for(i=0;i<arrlist.length-1;i++){
-            for(j=0;j<arrlist.length-1-i;j++){
-                if(arrlist[j]>arrlist[j+1]){
-                    var temp=arrlist[j];
-                    arrlist[j]=arrlist[j+1];
-                    arrlist[j+1]=temp;
-                }
-            }
-        }
-        return arrlist;
-    }
-    sortarr(arrlist,dataSort);
-
+	
 	var dataSort=[];
 	for(var i=0;i<arrlist.length;i++){
 		dataSort[i]={sorts:arrlist[i]};
