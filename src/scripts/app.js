@@ -4,6 +4,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
         var con = document.getElementsByClassName('content')[0];
         con.style.minHeight=$window.innerHeight +'px';
+        var lists = document.getElementsByClassName('son-list'),time;
         // 样式
         $scope.closeDe = function (id) {
             var id = 'active_'+id;
@@ -45,7 +46,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             imgLoader(imgList, function (percentage) {
                 var percentT = percentage * 100;
                 $('#percent').html((parseInt(percentT)) + '%');
-
                 if (parseInt(percentT) == 100) {
                     $("#loading").hide();
                     $("#coverPic").fadeIn(1000);
@@ -64,15 +64,8 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 var newUser = [];
                 $scope.users = [];
                 newUser = ABCSort(users);
-                var lists = document.getElementsByTagName('md-list'),time;
-                //console.log(newUser.length)
-                //console.log(lists.length)
-                for (var i=0;i<newUser.length;i++){
-                    $scope.users.push(newUser[i]);
-                    //Cannot read property 'style' of undefined,本来lists[i]应该单独写循环，虽报错不影响
-                    time = (i*100)+'ms';
-                    lists[i].style.animationDelay = time;
-                };
+
+                forLists(newUser);
 
                 //实现查询功能
                 $scope.$watch('searchText', function(searchText) {
@@ -84,8 +77,17 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                 });
             }
+            function forLists(newUser) {
+                for (var i=0;i<newUser.length;i++){
+                    console.log($scope.users)
+                    $scope.users.push(newUser[i]);
+                    time = (i*100+100)+'ms';
+                    lists[i].style.animationDelay = time;
+                };
+            }
             //排序切换
             $(".switchSort").click(function(){
+
                 var flag=$(this).attr("sort");
                 if(flag=="groupName"){
                     var data= strSort(users,flag);
@@ -110,6 +112,16 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                         return dataSort;
                     }
                     $scope.users=sortarr(datalist,data);
+                    var sortUser = [];
+
+                    // sortUser=sortarr(datalist,data);
+                    //
+                    // forLists(sortUser);
+                    //console.log($scope.users)
+
+
+                    //time = (i*100+100)+'ms';
+                    //lists[i].style.animationDelay = time;
                 }
                 if(flag=="ABC"){
                     $scope.users=ABCSort(users);

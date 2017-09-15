@@ -13,7 +13,7 @@ angular.module('myApp')
                     //angular.element(this).attr('style',"transform: translateY(" + ty + "px)");
                     var de = document.getElementById(detail_target);
                     de.setAttribute('class','active list-detail');
-                    //暂时
+                    //不能删除
                     var bar = document.getElementsByClassName('toolbar')[0];
                     bar.style.display='none';
 
