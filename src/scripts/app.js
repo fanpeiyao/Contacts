@@ -74,7 +74,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     lists[i].style.animationDelay = time;
                 };
 
-
                 //实现查询功能
                 $scope.$watch('searchText', function(searchText) {
                     if(searchText===""){
