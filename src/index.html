@@ -42,7 +42,7 @@
     <div  class="manList">
 
         <md-content class="md-padding content"  layout-xs="column" layout="row" >
-            <md-list flex ng-repeat="sorts in users track by $index " class="listBox ">
+            <md-list flex ng-repeat="sorts in users track by $index " class="listBox" >
                 <md-subheader class="md-no-sticky son-list fadeInUpBig"  >{{sorts.sorts}}</md-subheader>
 
                 <md-list-item class="md-2-line list-item son-list fadeInUpBig"  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
@@ -52,7 +52,7 @@
                     <md-chips>
                         <md-chip ng-bind="user.groupName"></md-chip>
                     </md-chips>
-                    <img ng-src="{{user.photo}}" class="md-avatar" />
+                    <img ng-src="{{user.photo}}"  src="resource/images/tx3.jpg"  class="md-avatar" />
                 </md-list-item>
 
 
@@ -65,7 +65,7 @@
                     <h2 class="mdl-card__title-text" ng-bind="i.name"></h2>
 
                     <!--<img ng-src="{{i.photo}}" class="md-card-image avatar mdl-shadow&#45;&#45;4dp">-->
-                    <img ng-src="{{i.photoBg}}" class="md-card-image  mdl-shadow--2dp">
+                    <img ng-src="{{i.photoBg}}" src="resource/images/bg.jpg"class="md-card-image  mdl-shadow--2dp">
 
                     <div class="demo-card-square mdl-card  list-de-con padding-bottom">
                         <!--电话开始-->

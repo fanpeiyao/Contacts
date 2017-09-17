@@ -1,11 +1,13 @@
 var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
     .controller("ManCtrl",["$scope","ManService","$filter",'$timeout','$window',function ($scope,ManService,$filter,$timeout,$window) {
 
-
+        //更改详情页在iPhone端兼容样式
         var con = document.getElementsByClassName('content')[0];
         con.style.minHeight=$window.innerHeight +'px';
+        //获取各个列表为以后添加动画准备
         var lists = document.getElementsByClassName('son-list'),time;
-        // 样式
+
+        // 关闭详情样式
         $scope.closeDe = function (id) {
             var id = 'active_'+id;
             var de = document.getElementById(id);
@@ -13,12 +15,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var bar = document.getElementsByClassName('toolbar')[0];
             bar.style.display='block';
         }
+        //搜索关闭
         $scope.on_clear=function () {
             $scope.searchText='';
             $scope.clickIcon = false;
         }
 
-
+        //控制搜索展开
         $scope.clickIcon = false;
         $scope.showSearch = function() {
             if ($scope.clickIcon === false) {
@@ -79,11 +82,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             }
             function forLists(newUser) {
                 for (var i=0;i<newUser.length;i++){
-                    console.log($scope.users)
                     $scope.users.push(newUser[i]);
+                };
+                for (var i=0;i<lists.length;i++){
                     time = (i*100+100)+'ms';
                     lists[i].style.animationDelay = time;
                 };
+
             }
             //排序切换
             $(".switchSort").click(function(){
@@ -125,7 +130,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 }
                 if(flag=="ABC"){
                     $scope.users=ABCSort(users);
-                    console.log($scope.users)
+                    //console.log($scope.users)
                 }
             })
 
