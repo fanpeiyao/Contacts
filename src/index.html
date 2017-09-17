@@ -197,11 +197,8 @@
                     </md-fab-trigger>
 
                     <md-fab-actions >
-                        <md-button aria-label="Twitter" class="md-fab md-raised md-mini">
-                            <md-icon   aria-label="Twitter"><i sort="groupName" class="switchSort material-icons">contacts</i></md-icon>
-                        </md-button>
-                        <md-button aria-label="Facebook" class="md-fab md-raised md-mini">
-                            <md-icon aria-label="Facebook"><i sort="ABC" class="switchSort material-icons color-pink">sort_by_alpha</i></md-icon>
+                        <md-button aria-label="Twitter" class="md-fab md-raised md-mini" ng-repeat="icon in sortsIcon">
+                            <md-icon ><i sort="groupName" sort="{{icon.name}}" class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
                         </md-button>
                     </md-fab-actions>
                 </md-fab-speed-dial>
