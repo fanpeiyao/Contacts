@@ -19,20 +19,21 @@
 <body ng-app="myApp" >
 <!--page content -->
 <div  ng-controller="ManCtrl">
-    <div id="cover" >
+    <div style="display:block;" id="cover" >
         <div id="loading">
-            <span id="percent">0%</span>
+            <span id="percent" ng-bind="percent">0%</span>
             <img src="resource/images/loading.png" alt="">
         </div>
         <img style="display:none;" id="coverPic" src="resource/images/cover.jpg" alt="">
     </div>
 
+    <!--搜索-->
     <md-toolbar class="toolbar mdl-shadow--2dp">
         <div class="md-toolbar-tools">
             <div class="search-widget qp-ui qp-ui-search-input searchBox" ng-class="{'width80':clickIcon,'width0':!clickIcon}">
                 <button class="search-button" ng-click="showSearch()"><i class="material-icons">search</i></button>
                 <button class="search-close-button"  ng-class="{'showClose':clickIcon,'hide':!clickIcon}"><i class="material-icons" ng-click="on_clear()">close</i></button>
-                <input  type="text" id="input-0" ng-model="searchText" >
+                <input  type="text" id="input-0" ng-model="searchText" ng-change="change(searchText)" >
                 <label class="mdl-textfield__label">Search</label>
             </div>
         </div>

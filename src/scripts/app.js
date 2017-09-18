@@ -19,7 +19,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         $scope.on_clear=function () {
             $scope.searchText='';
             $scope.clickIcon = false;
-        }
+            loadData();
+        };
+
+        //实现查询功能
+        $scope.change=function (searchText) {
+            var abc=$filter("filter")(users,searchText);
+            $scope.users=ABCSort(abc);
+        };
 
         //控制搜索展开
         $scope.clickIcon = false;
@@ -41,7 +48,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             }else{
                 alert('加载数据出错');
             }
-        })
+        });
 
 
 
@@ -54,18 +61,22 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         for(var i=0;i<users.length;i++){
             imgList.push(users[i].photo);
         }
-        $scope.percent=0;
         imgLoader(imgList, function (percentage) {
-            var percentT = percentage * 100;
-            $('#percent').html((parseInt(percentT)) + '%');
+            var percentT = parseInt(percentage * 100);
+            $scope.percent=percentT+"%";
+            console.log($scope.percent);
+
             if (parseInt(percentT) == 100) {
-                $("#loading").hide();
-                $("#coverPic").fadeIn(1000);
+                document.getElementById('loading').style.display='none';
+                document.getElementById('coverPic').style.display='block';
+                $timeout(function(){
+                    document.getElementById('cover').setAttribute("class","fadeOut");
+                    $timeout(function(){
+                        document.getElementById('cover').style.display="none";
+                    },1200);
+                    loadData();
+                },3000);
             }
-            $timeout(function(){
-                $('#cover').fadeOut(1000);
-                loadData();
-            },3000);
         });
 
         /*********************
@@ -76,18 +87,8 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var newUser = [];
 
             newUser = ABCSort(users);
-
             forLists(newUser);
 
-            //实现查询功能
-            $scope.$watch('searchText', function(searchText) {
-                if(searchText===""){
-                    $scope.users=$filter("filter")(newUser);
-                }else{
-                    var abc=$filter("filter")(users,searchText);
-                    $scope.users=ABCSort(abc);
-                }
-            });
         }
         function forLists(newUser) {
             $scope.users = [];
@@ -128,7 +129,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                     return dataSort;
                 }
-                console.log(sortarr(datalist,data))
+                
 
                 aaa=sortarr(datalist,data);
                 forLists(aaa);
