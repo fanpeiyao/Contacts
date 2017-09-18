@@ -200,7 +200,7 @@
                     <md-fab-actions ng-show="showIcon">
                         <div class="md-fab-action-item" ng-class="{'scaleIn': showIcon,'scaleOut':!showIcon}"  ng-repeat="icon in sortsIcon">
                             <md-button  aria-label="{{icon.iconName}}" class="md-fab md-raised md-mini" >
-                                <md-icon  aria-label="{{icon.iconName}}" ng-click="switch($index)"><i class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
+                                <md-icon  aria-label="{{icon.iconName}}" ng-click="switch(icon.name)"><i class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
                             </md-button>
                         </div>
                     </md-fab-actions>
