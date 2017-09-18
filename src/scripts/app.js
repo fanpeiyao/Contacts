@@ -80,14 +80,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             forLists(newUser);
 
             //实现查询功能
-            $scope.$watch('searchText', function(searchText) {
+            $scope.change=function (searchText) {
                 if(searchText===""){
                     $scope.users=$filter("filter")(newUser);
                 }else{
                     var abc=$filter("filter")(users,searchText);
                     $scope.users=ABCSort(abc);
                 }
-            });
+            };
         }
         function forLists(newUser) {
             for (var i=0;i<newUser.length;i++){
