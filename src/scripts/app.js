@@ -18,8 +18,8 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         //搜索关闭
         $scope.on_clear=function () {
             $scope.searchText='';
-            loadData();
             $scope.clickIcon = false;
+            loadData();
         };
 
         //实现查询功能
@@ -48,7 +48,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             }else{
                 alert('加载数据出错');
             }
-        })
+        });
 
 
 
@@ -83,7 +83,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             var newUser = [];
             $scope.users = [];
             newUser = ABCSort(users);
-
             forLists(newUser);
 
         }
