@@ -18,8 +18,15 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         //搜索关闭
         $scope.on_clear=function () {
             $scope.searchText='';
+            loadData();
             $scope.clickIcon = false;
-        }
+        };
+
+        //实现查询功能
+        $scope.change=function (searchText) {
+            var abc=$filter("filter")(users,searchText);
+            $scope.users=ABCSort(abc);
+        };
 
         //控制搜索展开
         $scope.clickIcon = false;
@@ -79,15 +86,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
             forLists(newUser);
 
-            //实现查询功能
-            $scope.change=function (searchText) {
-                if(searchText===""){
-                    $scope.users=$filter("filter")(newUser);
-                }else{
-                    var abc=$filter("filter")(users,searchText);
-                    $scope.users=ABCSort(abc);
-                }
-            };
         }
         function forLists(newUser) {
             for (var i=0;i<newUser.length;i++){
