@@ -85,16 +85,18 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
         function loadData() {
             var newUser = [];
-            $scope.users = [];
+
             newUser = ABCSort(users);
             forLists(newUser);
 
         }
         function forLists(newUser) {
+            $scope.users = [];
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
             $timeout(function () {
+                console.log(lists)
                 for (var i=0;i<lists.length;i++){
                     time = (i*100+100)+'ms';
                     lists[i].style.animationDelay = time;
@@ -102,10 +104,10 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             },0)
         }
         //排序切换
-        $scope.switch=function($index){
-            $scope.showIon = false
-            if($scope.sortsIcon[$index].name=='groupName'){
-                var flag=$scope.sortsIcon[$index].name;
+        $scope.switch=function(name){
+            $scope.showIon = false;
+            if(name=='groupName'){
+                var flag=name;
                 var data= strSort(users,flag);
                 var datalist=[];
                 for(var i=0;i<data.length;i++){
@@ -127,12 +129,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                     return dataSort;
                 }
-                $scope.users=sortarr(datalist,data);
-                console.log($scope.users)
+                
+
+                aaa=sortarr(datalist,data);
+                forLists(aaa);
             }
 
-            if($scope.sortsIcon[$index].name=='ABC'){
-                $scope.users=ABCSort(users);
+            if(name=='ABC'){
+                loadData();
             }
         }
 
