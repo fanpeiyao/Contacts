@@ -42,6 +42,7 @@
     <div  class="manList">
 
         <md-content class="md-padding content"  layout-xs="column" layout="row" >
+
             <md-list flex ng-repeat="sorts in users track by $index " class="listBox" >
                 <md-subheader class="md-no-sticky son-list fadeInUpBig"  >{{sorts.sorts}}</md-subheader>
 
@@ -54,7 +55,6 @@
                     </md-chips>
                     <img ng-src="{{user.photo}}"  src="resource/images/tx3.jpg"  class="md-avatar" />
                 </md-list-item>
-
 
             </md-list>
 
@@ -187,19 +187,22 @@
                 </md-fab-actions>
             </md-fab-speed-dial>
 
+
             <!--右下角按钮-->
             <div class="lock-size" layout="row" layout-align="center center">
-                <md-fab-speed-dial  md-direction="left" class="md-scale">
+                <md-fab-speed-dial  md-direction="left" ng-class="md-scale" md-open="showIcon" ng-click="showIcon = !showIcon">
                     <md-fab-trigger >
-                        <md-button aria-label="menu" class="md-fab md-warn">
-                            <i class="material-icons menuIcon"></i>
+                        <md-button  aria-label="menu" class="md-fab md-warn"  >
+                            <i class="material-icons menuIcon" aria-label="menu"></i>
                         </md-button>
                     </md-fab-trigger>
 
-                    <md-fab-actions >
-                        <md-button aria-label="Twitter" class="md-fab md-raised md-mini" ng-repeat="icon in sortsIcon">
-                            <md-icon ><i sort="groupName" sort="{{icon.name}}" class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
-                        </md-button>
+                    <md-fab-actions ng-show="showIcon">
+                        <div class="md-fab-action-item" ng-class="{'scaleIn': showIcon,'scaleOut':!showIcon}"  ng-repeat="icon in sortsIcon">
+                            <md-button  aria-label="{{icon.iconName}}" class="md-fab md-raised md-mini" >
+                                <md-icon  aria-label="{{icon.iconName}}" ng-click="switch($index)"><i class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
+                            </md-button>
+                        </div>
                     </md-fab-actions>
                 </md-fab-speed-dial>
             </div>
