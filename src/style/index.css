@@ -430,3 +430,15 @@ md-chips{
     -ms-transform: translateY(-6px) rotate(-45deg);
     transform: translateY(-6px) rotate(-45deg);
 }
+.scaleIn{
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 2ms;
+    z-index: 22;
+}
+.scaleOut{
+    opacity: 0;
+    transform: scale(0);
+    transition-delay: 2ms;
+    z-index: 22;
+}
