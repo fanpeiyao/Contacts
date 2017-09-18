@@ -61,18 +61,22 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         for(var i=0;i<users.length;i++){
             imgList.push(users[i].photo);
         }
-        $scope.percent=0;
         imgLoader(imgList, function (percentage) {
-            var percentT = percentage * 100;
-            $('#percent').html((parseInt(percentT)) + '%');
+            var percentT = parseInt(percentage * 100);
+            $scope.percent=percentT+"%";
+            console.log($scope.percent);
+
             if (parseInt(percentT) == 100) {
-                $("#loading").hide();
-                $("#coverPic").fadeIn(1000);
+                document.getElementById('loading').style.display='none';
+                document.getElementById('coverPic').style.display='block';
+                $timeout(function(){
+                    document.getElementById('cover').setAttribute("class","fadeOut");
+                    $timeout(function(){
+                        document.getElementById('cover').style.display="none";
+                    },1200);
+                    loadData();
+                },3000);
             }
-            $timeout(function(){
-                $('#cover').fadeOut(1000);
-                loadData();
-            },3000);
         });
 
         /*********************
@@ -124,6 +128,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     return dataSort;
                 }
                 $scope.users=sortarr(datalist,data);
+                console.log($scope.users)
             }
 
             if($scope.sortsIcon[$index].name=='ABC'){

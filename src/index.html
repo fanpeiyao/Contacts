@@ -19,9 +19,9 @@
 <body ng-app="myApp" >
 <!--page content -->
 <div  ng-controller="ManCtrl">
-    <div id="cover" >
+    <div style="display:block;" id="cover" >
         <div id="loading">
-            <span id="percent">0%</span>
+            <span id="percent" ng-bind="percent">0%</span>
             <img src="resource/images/loading.png" alt="">
         </div>
         <img style="display:none;" id="coverPic" src="resource/images/cover.jpg" alt="">
