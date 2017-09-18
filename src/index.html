@@ -73,7 +73,7 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">call</i>
                             <span class="marginLeft">
-                                <div class="color-normal marginBottom" ng-bind="i.mobile"></div>
+                                <a href="i.mobile"><div class="color-normal marginBottom" ng-bind="i.mobile"></div></a>
                                 <div class="color-gary">Mobile</div>
                             </span>
                         </div>
@@ -191,7 +191,7 @@
 
             <!--右下角按钮-->
             <div class="lock-size" layout="row" layout-align="center center">
-                <md-fab-speed-dial  md-direction="left" ng-class="md-scale" md-open="showIcon" ng-click="showIcon = !showIcon">
+                <md-fab-speed-dial  md-direction="left" class="md-scale" md-open="showIcon" ng-click="showIcon = !showIcon">
                     <md-fab-trigger >
                         <md-button  aria-label="menu" class="md-fab md-warn"  >
                             <i class="material-icons menuIcon" aria-label="menu"></i>

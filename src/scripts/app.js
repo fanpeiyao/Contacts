@@ -64,7 +64,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         imgLoader(imgList, function (percentage) {
             var percentT = parseInt(percentage * 100);
             $scope.percent=percentT+"%";
-            console.log($scope.percent);
 
             if (parseInt(percentT) == 100) {
                 document.getElementById('loading').style.display='none';
@@ -91,7 +90,9 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
         }
         function forLists(newUser) {
+            console.log($scope.users)
             $scope.users = [];
+            console.log($scope.users)
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
