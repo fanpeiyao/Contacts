@@ -33,7 +33,7 @@
             <div class="search-widget qp-ui qp-ui-search-input searchBox" ng-class="{'width80':clickIcon,'width0':!clickIcon}">
                 <button class="search-button" ng-click="showSearch()"><i class="material-icons">search</i></button>
                 <button class="search-close-button"  ng-class="{'showClose':clickIcon,'hide':!clickIcon}"><i class="material-icons" ng-click="on_clear()">close</i></button>
-                <input  type="text" id="input-0" ng-model="searchText" >
+                <input  type="text" id="input-0" ng-model="searchText" ng-change="change()" >
                 <label class="mdl-textfield__label">Search</label>
             </div>
         </div>
