@@ -282,6 +282,7 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
     width: 48px;
     z-index: 2;
     position: fixed;
+    outline: none;
 }
 
 .search-widget .search-close-button {
