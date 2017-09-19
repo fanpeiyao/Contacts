@@ -45,6 +45,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         p.then(function (result) {
             if (result.status == 200){
                 users = result.data.dateList;
+                img(users);
             }else{
                 alert('加载数据出错');
             }
@@ -55,29 +56,28 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         /*********************
          图片预加载 start
          **********************/
-
-        var imgList=[];
-        imgList.push("resource/images/cover.jpg");
-        for(var i=0;i<users.length;i++){
-            imgList.push(users[i].photo);
-        }
-        imgLoader(imgList, function (percentage) {
-            var percentT = parseInt(percentage * 100);
-            $scope.percent=percentT+"%";
-
-            if (parseInt(percentT) == 100) {
-                document.getElementById('loading').style.display='none';
-                document.getElementById('coverPic').style.display='block';
-                $timeout(function(){
-                    document.getElementById('cover').setAttribute("class","fadeOut");
-                    $timeout(function(){
-                        document.getElementById('cover').style.display="none";
-                    },1200);
-                    loadData();
-                },3000);
+        function img(users){
+            var imgList=[];
+            imgList.push("resource/images/cover.jpg");
+            for(var i=0;i<users.length;i++){
+                imgList.push(users[i].photo);
             }
-        });
-
+            imgLoader(imgList, function (percentage) {
+                var percentT = parseInt(percentage * 100);
+                document.getElementById('percent').innerHTML=percentT+"%";
+                if (parseInt(percentT) == 100) {
+                    document.getElementById('loading').style.display='none';
+                    document.getElementById('coverPic').style.display='block';
+                    $timeout(function(){
+                        document.getElementById('cover').setAttribute("class","fadeOut");
+                        $timeout(function(){
+                            document.getElementById('cover').style.display="none";
+                        },1200);
+                        loadData();
+                    },3000);
+                }
+            });
+        }
         /*********************
          图片预加载 end
          **********************/
