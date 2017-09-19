@@ -67,7 +67,11 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 document.getElementById('percent').innerHTML=percentT+"%";
                 if (parseInt(percentT) == 100) {
                     document.getElementById('loading').style.display='none';
-                    document.getElementById('coverPic').style.display='block';
+                    var cover = document.getElementById('coverPic');
+                    cover.style.display='block';
+                    cover.style.height=document.body.clientHeight + 'px';
+                    console.log(document.body.clientHeight);
+                    console.log(window.innerHeight)
                     $timeout(function(){
                         document.getElementById('cover').setAttribute("class","fadeOut");
                         $timeout(function(){
@@ -96,13 +100,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
-            $timeout(function () {
+            requestAnimationFrame(function() {
                 console.log(lists)
                 for (var i=0;i<lists.length;i++){
                     time = (i*100+100)+'ms';
                     lists[i].style.animationDelay = time;
                 };
-            },0)
+            })
         }
         //排序切换
         $scope.switch=function(name){

@@ -222,13 +222,7 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
     -webkit-animation:fadeInUpBig 1s .2s ease both;
     -moz-animation:fadeInUpBig 1s .2s ease both;
 }
-/*@for $i from 1 through length(9){*/
-    /*md-list>md-list-item:nth-child(#{$i}){*/
-        /*animation-delay: (100 * $i)s;*/
-        /*-moz-animation-delay: -2s;*/
-        /*-webkit-animation-delay: -2s;*/
-    /*}*/
-/*}*/
+
 @-webkit-keyframes fadeInUpBig{
     0%{opacity:0;
         -webkit-transform:translateY(2000px)}
@@ -334,10 +328,6 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 }
 
 .listBox .md-no-sticky{
-    /*color: #FF4181;
-    position: absolute;
-    left: -6px;
-    margin-top: 13px;*/
     background: #f7f6f6;
 }
 .listBox .md-no-sticky .md-subheader-inner{
@@ -474,4 +464,30 @@ md-chips{
     transform: scale(0);
     transition-delay: 2ms;
     z-index: 22;
+}
+
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        -ms-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+}
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }

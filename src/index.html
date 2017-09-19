@@ -73,13 +73,13 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">call</i>
                             <span class="marginLeft">
-                                <a href="i.mobile"><div class="color-normal marginBottom" ng-bind="i.mobile"></div></a>
+                                <a ng-href="tel:{{i.mobile}}"><div class="color-normal marginBottom" ng-bind="i.mobile"></div></a>
                                 <div class="color-gary">Mobile</div>
                             </span>
                         </div>
                         <div class="mdl-card__actions  card-son">
                             <span class="width100  card-border card-span">
-                                <div  class="color-normal marginBottom" ng-bind="i.telephone"></div>
+                                <a ng-href="tel:{{i.telephone}}" ><div  class="color-normal marginBottom" ng-bind="i.telephone"></div></a>
                                 <div class="color-gary">Work</div>
                             </span>
                         </div>
@@ -88,7 +88,7 @@
                         <div class="mdl-card__title mdl-card--expand ">
                             <i class="material-icons marginRight color-blue">mail</i>
                             <span class="marginLeft">
-                                <div class="color-normal marginBottom"  ng-bind="i.email"></div>
+                                <a ng-href="mailto:{{i.email}}"><div class="color-normal marginBottom"  ng-bind="i.email"></div></a>
                                 <div class="color-gary">Email</div>
                             </span>
                         </div>
@@ -198,7 +198,7 @@
                         </md-button>
                     </md-fab-trigger>
 
-                    <md-fab-actions ng-show="showIcon">
+                    <md-fab-actions ng-show="showIcon" class="zoomIn animated">
                         <div class="md-fab-action-item" ng-class="{'scaleIn': showIcon,'scaleOut':!showIcon}"  ng-repeat="icon in sortsIcon">
                             <md-button  aria-label="{{icon.iconName}}" class="md-fab md-raised md-mini" >
                                 <md-icon  aria-label="{{icon.iconName}}" ng-click="switch(icon.name)"><i class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
