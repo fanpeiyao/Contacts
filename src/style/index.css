@@ -90,6 +90,9 @@ md-content::-webkit-scrollbar {
     border-radius:50%;
     float: right;
 }
+.searchBox>input::-webkit-input-placeholder {
+    color: rgba(255,255,255,.54);
+}
 .list-detail{
     position: fixed;
     flex-flow: column wrap;
