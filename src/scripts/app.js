@@ -69,9 +69,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     document.getElementById('loading').style.display='none';
                     var cover = document.getElementById('coverPic');
                     cover.style.display='block';
-                    cover.style.height=document.body.clientHeight + 'px';
-                    console.log(document.body.clientHeight);
-                    console.log(window.innerHeight)
                     $timeout(function(){
                         document.getElementById('cover').setAttribute("class","fadeOut");
                         $timeout(function(){
