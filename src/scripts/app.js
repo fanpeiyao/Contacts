@@ -28,18 +28,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             $scope.users=ABCSort(abc);
         };
 
-        //控制搜索展开
-        $scope.clickIcon = false;
-        $scope.showSearch = function() {
-            if ($scope.clickIcon === false) {
-                $scope.clickIcon = true;
-            }
-            else {
-                $scope.clickIcon = false;
-            }
-        };
-
-
         //获取列表数据
         var p = ManService.getAll(),users=[];
         p.then(function (result) {
@@ -51,11 +39,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             }
         });
 
-
-
-        /*********************
-         图片预加载 start
-         **********************/
+        /**图片预加载 start**/
         function img(users){
             var imgList=[];
             imgList.push("resource/images/cover.jpg");
@@ -79,32 +63,29 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 }
             });
         }
-        /*********************
-         图片预加载 end
-         **********************/
+        /**图片预加载 end**/
 
         function loadData() {
             var newUser = [];
-
             newUser = ABCSort(users);
             forLists(newUser);
-
         }
         function forLists(newUser) {
-            console.log($scope.users)
             $scope.users = [];
-            console.log($scope.users)
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
             requestAnimationFrame(function() {
-                console.log(lists)
                 for (var i=0;i<lists.length;i++){
                     time = (i*100+100)+'ms';
                     lists[i].style.animationDelay = time;
                 };
             })
         }
+
+        //获取排序按钮
+        $scope.sortsIcon = ManService.getSort();
+
         //排序切换
         $scope.switch=function(name){
             $scope.showIon = false;
@@ -131,17 +112,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                     return dataSort;
                 }
-                
-
                 aaa=sortarr(datalist,data);
                 forLists(aaa);
             }
-
             if(name=='ABC'){
                 loadData();
             }
         }
 
-        //获取切换按钮
-        $scope.sortsIcon = ManService.getSort();
+
     }])
