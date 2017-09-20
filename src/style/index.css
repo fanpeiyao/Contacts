@@ -207,6 +207,9 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 .listBox .md-avatar{
     margin-right:0;
 }
+md-list-item.md-no-proxy, md-list-item .md-no-style{
+    padding:0px;
+}
 .show{
     display: block;
     margin-top: 0;
