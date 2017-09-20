@@ -84,20 +84,15 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
 
         function loadData() {
             var newUser = [];
-
             newUser = ABCSort(users);
             forLists(newUser);
-
         }
         function forLists(newUser) {
-            console.log($scope.users)
             $scope.users = [];
-            console.log($scope.users)
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
             $timeout(function () {
-                console.log(lists)
                 for (var i=0;i<lists.length;i++){
                     time = (i*100+100)+'ms';
                     lists[i].style.animationDelay = time;
