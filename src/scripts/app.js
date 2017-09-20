@@ -70,14 +70,16 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             newUser = ABCSort(users);
             forLists(newUser);
         }
+
         function forLists(newUser) {
             $scope.users = [];
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
             requestAnimationFrame(function() {
-                for (var i=0;i<lists.length;i++){
+                for (var i=0;i<10;i++){
                     time = (i*100+100)+'ms';
+                    lists[i].classList.add('fadeInUpBig');
                     lists[i].style.animationDelay = time;
                 };
             })
@@ -112,11 +114,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                     return dataSort;
                 }
-                aaa=sortarr(datalist,data);
-                forLists(aaa);
+                $scope.users = sortarr(datalist,data);
+                //aaa=sortarr(datalist,data);
+                //forLists(aaa);
             }
             if(name=='ABC'){
-                loadData();
+                //loadData();
+                $scope.users = ABCSort(users);
             }
         }
 
