@@ -64,14 +64,18 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             });
         }
         /**图片预加载 end**/
-
+        // var newUser = [];
+        // $scope.users = [];
         function loadData() {
             var newUser = [];
             newUser = ABCSort(users);
             forLists(newUser);
         }
+
         function forLists(newUser) {
-            $scope.users = [];
+
+            $scope.users=[''] ;
+            console.log();
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
@@ -116,9 +120,8 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 forLists(aaa);
             }
             if(name=='ABC'){
+                // newUser = ABCSort(users);
                 loadData();
             }
         }
-
-
-    }])
+    }]);
