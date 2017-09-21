@@ -65,8 +65,6 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         }
         /**图片预加载 end**/
 
-        // var newUser = [];
-        $scope.users = [];
         function loadData() {
             var newUser = [];
             newUser = ABCSort(users);
@@ -74,28 +72,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         }
 
         function forLists(newUser) {
-            $scope.users=[] ;
-            console.log();
+            $scope.users = [];
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
             requestAnimationFrame(function() {
-                for (var i=0;i<lists.length;i++){
+                for (var i=0;i<10;i++){
                     time = (i*100+100)+'ms';
-                    lists[i].style.animationDelay = time;
-                };
-            })
-        }
-        function forListsClick(newUser) {
-            var a=new Array(0);
-            $scope.users=a ;
-            alert($scope.users);
-            for (var i=0;i<newUser.length;i++){
-                $scope.users.push(newUser[i]);
-            };
-            requestAnimationFrame(function() {
-                for (var i=0;i<lists.length;i++){
-                    time = (i*100+100)+'ms';
+                    lists[i].classList.add('fadeInUpBig');
                     lists[i].style.animationDelay = time;
                 };
             })
@@ -130,14 +114,15 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                     return dataSort;
                 }
-                $scope.users=sortarr(datalist,data);
-                // forLists(aaa);
-                forListsClick($scope.users)
+                $scope.users = sortarr(datalist,data);
+                //aaa=sortarr(datalist,data);
+                //forLists(aaa);
             }
             if(name=='ABC'){
-                $scope.users = ABCSort(users);
                 //loadData();
-                forListsClick($scope.users)
+                $scope.users = ABCSort(users);
             }
         }
-    }]);
+
+
+    }])

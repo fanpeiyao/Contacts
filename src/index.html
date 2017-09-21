@@ -33,7 +33,7 @@
             <div class="search-widget qp-ui qp-ui-search-input searchBox" ng-class="{'width80':clickIcon,'width0':!clickIcon}">
                 <button class="search-button" ng-click="clickIcon = !clickIcon"><i class="material-icons">search</i></button>
                 <button class="search-close-button"  ng-class="{'showClose':clickIcon,'hide':!clickIcon}"><i class="material-icons" ng-click="on_clear()">close</i></button>
-                <input  type="text" id="input-0" ng-model="searchText" ng-change="change(searchText)" placeholder="Search">
+                <input  type="text" md-autofocus id="input-0" ng-model="searchText" ng-change="change(searchText)" placeholder="Search">
             </div>
         </div>
     </md-toolbar>
@@ -44,9 +44,9 @@
         <md-content class="md-padding content"  layout-xs="column" layout="row" >
 
             <md-list flex ng-repeat="sorts in users track by $index " class="listBox" >
-                <md-subheader class="md-no-sticky son-list fadeInUpBig"  >{{sorts.sorts}}</md-subheader>
+                <md-subheader class="md-no-sticky son-list "  >{{sorts.sorts}}</md-subheader>
 
-                <md-list-item class="md-2-line list-item son-list fadeInUpBig"  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
+                <md-list-item class="md-2-line list-item son-list "  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
                         <p   class="userName" ng-bind="user.name"></p>
                     </div>
