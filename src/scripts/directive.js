@@ -20,11 +20,12 @@ angular.module('myApp')
             }
         }
     }])
-    .directive('listMap',function () {
+    .directive('listMap',['$rootScope',function ($rootScope) {
         return {
             restrict:'A',
             link:function (scope,element,attr) {
                angular.element(document).ready(function () {
+                   //console.log($rootScope.allPoint);
                    var mapId = element.attr('id');
                    var x = attr.coordx;
                    var y = attr.coordy;
@@ -34,11 +35,12 @@ angular.module('myApp')
                    map.centerAndZoom(point,13);
                    var marker = new BMap.Marker(point);  // 创建标注
                    map.addOverlay(marker);               // 将标注添加到地图中
-                   marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+
                })
             }
         }
-    })
+    }])
 
 
 

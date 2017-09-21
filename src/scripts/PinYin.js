@@ -37,61 +37,66 @@ function ucfirst(l1){
 
 
 /****************************
-		汉字转拼音↑↑↑↑↑↑
-*****************************/
+ 汉字转拼音↑↑↑↑↑↑
+ *****************************/
 
 //按拼音首字母（分类）
 function ABCSort(data){
     var arr=[],firstName;
 
     for(var i=0;i<data.length;i++){
-    	//获取姓名拼音首字母
-       	firstName=data[i].sorts=codefans_net_CC2PY(data[i].name).substr(0,1);
+        //获取姓名拼音首字母
+        firstName=data[i].sorts=codefans_net_CC2PY(data[i].name).substr(0,1);
 
-       	//统一转大写字母（适用于英文字母排序）
+        //统一转大写字母（适用于英文字母排序）
         arr.push(firstName.toUpperCase());
 
     }
 
     //拼音首字母数组去重
-	var arrlist=[];//数组用于排序
-	for(i=0;i<arr.length;i++){
-		if(arrlist.indexOf(arr[i])==-1){
-			arrlist.push(arr[i]);
-		}
-	}
+    var arrlist=[];//数组用于排序
+    for(i=0;i<arr.length;i++){
+        if(arrlist.indexOf(arr[i])==-1){
+            arrlist.push(arr[i]);
+        }
+    }
 
-	//数据按拼音首字母分类重组
-	var dataSort=[];
-	for(var i=0;i<arrlist.length;i++){
-		dataSort[i]={sorts:arrlist[i]};
-		dataSort[i].details=[];
-		for(var j=0;j<data.length;j++){
-			if(data[j].sorts.toUpperCase()==dataSort[i].sorts){
-				dataSort[i].details.push(data[j]);
-			}
-    	}
-	}
+    //数据按拼音首字母分类重组
+    var dataSort=[];
+    for(var i=0;i<arrlist.length;i++){
+        dataSort[i]={sorts:arrlist[i]};
+        dataSort[i].details=[];
+        for(var j=0;j<data.length;j++){
+            if(data[j].sorts.toUpperCase()==dataSort[i].sorts){
+                dataSort[i].details.push(data[j]);
+            }
+        }
+    }
 
-    function sortarr(arrlist,dataSort){
-	    for(i=0;i<arrlist.length-1;i++){
-	        for(j=0;j<arrlist.length-1-i;j++){
-	            if(arrlist[j]>arrlist[j+1]){
-	                var temp=arrlist[j];
-	                arrlist[j]=arrlist[j+1];
-	                arrlist[j+1]=temp;
+    //    function sortarr(arrlist,dataSort){
+    //     for(i=0;i<arrlist.length-1;i++){
+    //         for(j=0;j<arrlist.length-1-i;j++){
+    //             if(arrlist[j]>arrlist[j+1]){
+    //                 var temp=arrlist[j];
+    //                 arrlist[j]=arrlist[j+1];
+    //                 arrlist[j+1]=temp;
 
-	                var sortdata=dataSort[j];
-	                dataSort[j]=dataSort[j+1];
-	                dataSort[j+1]=sortdata;
-	            }
-	        }
-	    }
-	    return dataSort;
-	}
-	sortarr(arrlist,dataSort);
+    //                 var sortdata=dataSort[j];
+    //                 dataSort[j]=dataSort[j+1];
+    //                 dataSort[j+1]=sortdata;
+    //             }
+    //         }
+    //     }
+    //     return dataSort;
+    // }
+    // sortarr(arrlist,dataSort);
 
-    return dataSort;
+    return dataSort.sort(function(a,b){
+        if(a.sorts < b.sorts)
+            return -1;
+        else
+            return 1;
+    });
 }
 
 /********************************/
@@ -99,36 +104,36 @@ function ABCSort(data){
 //按组分类
 function strSort(data,Str){
 
-	var arr=[],timeClass;
+    var arr=[],timeClass;
 
     for(var i=0;i<data.length;i++){
 
-    	for(var key in data[i]){
-    		if(key==Str){
-				arr.push(data[i][key]);	
-			}
-		} 
+        for(var key in data[i]){
+            if(key==Str){
+                arr.push(data[i][key]);
+            }
+        }
     }
 
-	var arrlist=[];
-	for(i=0;i<arr.length;i++){
-		if(arrlist.indexOf(arr[i])==-1){
-			arrlist.push(arr[i]);
-		}
-	}
-	
-	var dataSort=[];
-	for(var i=0;i<arrlist.length;i++){
-		dataSort[i]={sorts:arrlist[i]};
-		dataSort[i].details=[];
+    var arrlist=[];
+    for(i=0;i<arr.length;i++){
+        if(arrlist.indexOf(arr[i])==-1){
+            arrlist.push(arr[i]);
+        }
+    }
 
-		for(var j=0;j<data.length;j++){
-			for(var key in data[j]){
-				if(data[j][key]==dataSort[i].sorts){
-					dataSort[i].details.push(data[j]);
-				}
-			}
-    	}
-	}
-	return dataSort;
+    var dataSort=[];
+    for(var i=0;i<arrlist.length;i++){
+        dataSort[i]={sorts:arrlist[i]};
+        dataSort[i].details=[];
+
+        for(var j=0;j<data.length;j++){
+            for(var key in data[j]){
+                if(data[j][key]==dataSort[i].sorts){
+                    dataSort[i].details.push(data[j]);
+                }
+            }
+        }
+    }
+    return dataSort;
 }
