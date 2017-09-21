@@ -27,14 +27,23 @@ angular.module('myApp')
                angular.element(document).ready(function () {
                    //console.log($rootScope.allPoint);
                    var mapId = element.attr('id');
-                   var x = attr.coordx;
-                   var y = attr.coordy;
-                   // 百度地图API功能
+                   var area = attr.area;
+                   // var x = attr.coordx;
+                   // var y = attr.coordy;
+                   // // 百度地图API功能
+                   // var map = new BMap.Map(mapId);
+                   // var point = new BMap.Point(x,y);
+                   // map.centerAndZoom(point,13);
+                   // var marker = new BMap.Marker(point);  // 创建标注
+                   // map.addOverlay(marker);               // 将标注添加到地图中
+
+
                    var map = new BMap.Map(mapId);
-                   var point = new BMap.Point(x,y);
-                   map.centerAndZoom(point,13);
-                   var marker = new BMap.Marker(point);  // 创建标注
-                   map.addOverlay(marker);               // 将标注添加到地图中
+                   map.centerAndZoom(new BMap.Point('120，30'), 13);
+                   var local = new BMap.LocalSearch(map, {
+                       renderOptions:{map: map}
+                   });
+                   local.search(area);
 
 
                })
