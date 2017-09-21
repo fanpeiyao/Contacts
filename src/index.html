@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
     <title>网金花名册</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -165,6 +164,12 @@
                             </span>
                         </div>
 
+                        <!--地图-->
+
+                        <div id="map{{i.id}}"  list-map coordinate={{i.liveArea}} style="height: 300px;"></div>
+
+
+
                     </div>
                 </secition>
             </div>
@@ -186,6 +191,8 @@
                     </div>
                 </md-fab-actions>
             </md-fab-speed-dial>
+
+
 
 
             <!--右下角按钮-->
@@ -218,6 +225,8 @@
 <script src="scripts/imgLoader.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/PinYin.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=l6nvGEPwZapKs3Gu19Kkl2aBZLPdF7II	"></script>
+
 <script src="scripts/directive.js"></script>
 <script src="scripts/service.js"></script>
 
