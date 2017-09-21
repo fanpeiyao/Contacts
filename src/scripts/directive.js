@@ -30,8 +30,6 @@ angular.module('myApp')
                    var y = attr.coordy;
                    // 百度地图API功能
                    var map = new BMap.Map(mapId);
-                   console.log(x,y);
-
                    var point = new BMap.Point(x,y);
                    map.centerAndZoom(point,13);
                    var marker = new BMap.Marker(point);  // 创建标注
