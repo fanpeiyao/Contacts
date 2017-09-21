@@ -20,16 +20,19 @@ angular.module('myApp')
             }
         }
     }])
-    .directive('listMap',['$window',function ($window) {
+    .directive('listMap',function () {
         return {
             restrict:'A',
             link:function (scope,element,attr) {
                angular.element(document).ready(function () {
                    var mapId = element.attr('id');
-                   console.log(attr.coordinate)
+                   var x = attr.coordx;
+                   var y = attr.coordy;
                    // 百度地图API功能
                    var map = new BMap.Map(mapId);
-                   var point = new BMap.Point(120.187607,30.286744);
+                   console.log(x,y);
+
+                   var point = new BMap.Point(x,y);
                    map.centerAndZoom(point,13);
                    var marker = new BMap.Marker(point);  // 创建标注
                    map.addOverlay(marker);               // 将标注添加到地图中
@@ -37,7 +40,7 @@ angular.module('myApp')
                })
             }
         }
-    }])
+    })
 
 
 
