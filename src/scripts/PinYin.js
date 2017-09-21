@@ -73,25 +73,30 @@ function ABCSort(data){
     	}
 	}
 
-    function sortarr(arrlist,dataSort){
-	    for(i=0;i<arrlist.length-1;i++){
-	        for(j=0;j<arrlist.length-1-i;j++){
-	            if(arrlist[j]>arrlist[j+1]){
-	                var temp=arrlist[j];
-	                arrlist[j]=arrlist[j+1];
-	                arrlist[j+1]=temp;
+ //    function sortarr(arrlist,dataSort){
+	//     for(i=0;i<arrlist.length-1;i++){
+	//         for(j=0;j<arrlist.length-1-i;j++){
+	//             if(arrlist[j]>arrlist[j+1]){
+	//                 var temp=arrlist[j];
+	//                 arrlist[j]=arrlist[j+1];
+	//                 arrlist[j+1]=temp;
 
-	                var sortdata=dataSort[j];
-	                dataSort[j]=dataSort[j+1];
-	                dataSort[j+1]=sortdata;
-	            }
-	        }
-	    }
-	    return dataSort;
-	}
-	sortarr(arrlist,dataSort);
+	//                 var sortdata=dataSort[j];
+	//                 dataSort[j]=dataSort[j+1];
+	//                 dataSort[j+1]=sortdata;
+	//             }
+	//         }
+	//     }
+	//     return dataSort;
+	// }
+	// sortarr(arrlist,dataSort);
 
-    return dataSort;
+    return dataSort.sort(function(a,b){
+    	if(a.sorts < b.sorts)
+    		return -1;
+    	else
+    		return 1;
+    });
 }
 
 /********************************/

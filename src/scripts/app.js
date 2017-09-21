@@ -116,7 +116,10 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                 // }
                 //$scope.users = sortarr(datalist,data);
                 $scope.users = data.sort(function(a,b){
-                    return a.details[0].team > b.details[0].team;
+                    if(a.details[0].team<b.details[0].team)
+                        return -1;
+                    else
+                        return 1;
                 })
                 //aaa=sortarr(datalist,data);
                 //forLists(aaa);
