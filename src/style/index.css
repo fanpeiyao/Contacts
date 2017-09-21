@@ -207,6 +207,9 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 .listBox .md-avatar{
     margin-right:0;
 }
+md-list-item.md-no-proxy, md-list-item .md-no-style{
+    padding:0px;
+}
 .show{
     display: block;
     margin-top: 0;
@@ -497,3 +500,4 @@ md-chips{
 }
 #l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
 #r-result{height:100%;width:20%;float:left;}
+
