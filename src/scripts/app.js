@@ -64,8 +64,9 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             });
         }
         /**图片预加载 end**/
+
         // var newUser = [];
-        // $scope.users = [];
+        $scope.users = [];
         function loadData() {
             var newUser = [];
             newUser = ABCSort(users);
@@ -73,9 +74,22 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         }
 
         function forLists(newUser) {
-
-            $scope.users=[''] ;
+            $scope.users=[] ;
             console.log();
+            for (var i=0;i<newUser.length;i++){
+                $scope.users.push(newUser[i]);
+            };
+            requestAnimationFrame(function() {
+                for (var i=0;i<lists.length;i++){
+                    time = (i*100+100)+'ms';
+                    lists[i].style.animationDelay = time;
+                };
+            })
+        }
+        function forListsClick(newUser) {
+            var a=new Array(0);
+            $scope.users=a ;
+            alert($scope.users);
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
@@ -116,12 +130,14 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
                     }
                     return dataSort;
                 }
-                aaa=sortarr(datalist,data);
-                forLists(aaa);
+                $scope.users=sortarr(datalist,data);
+                // forLists(aaa);
+                forListsClick($scope.users)
             }
             if(name=='ABC'){
-                // newUser = ABCSort(users);
-                loadData();
+                $scope.users = ABCSort(users);
+                //loadData();
+                forListsClick($scope.users)
             }
         }
     }]);
