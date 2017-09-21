@@ -155,6 +155,9 @@
         "email":"raojinchao@gyj.com",
         "telephone":"0571-85135965",
         "weixin":"15824124983",
+        "photo":"resource/images/rjc-2.jpg",
+        "photoBg":"resource/images/rjc-1.jpg",
+
         "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
         "groupName":"产品经理团队",
         "post":"研发工程师",
@@ -194,6 +197,8 @@
         "mobile":"158-6847-1886",
         "email":"tangweitong@gyj.com",
         "telephone":"0571-85135857",
+        "photo":"resource/images/twt-2.jpg",
+        "photoBg":"resource/images/twt-1.jpg",
         "weixin":"15868471886",
         "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
         "groupName":"技术服务线",
@@ -961,25 +966,6 @@
       "nativePlace":"江苏 JangSu",
       "maritalStatus":"是",
       "team":8
-    },
-    {
-      "id":44,
-      "name": "陶金森",
-      "birthday": "12月03日",
-      "mobile":"13216176336",
-      "email":"taojs@gyj.com",
-      "telephone":"无",
-      "weixin":"13216176336",
-      "experience":[{"time":"2017.07-至今","company":"交易银行中心"},{"time":"2014.06-2017.06","company":"杭州掌朔"}],
-      "groupName":"模板制造线",
-      "post":"研发工程师",
-      "interest":"足球、乒乓球",
-      "liveArea":"拱墅区",
-      "coordX":"120.148447",
-      "coordY":"30.324643",
-      "nativePlace":"江西 JangXi",
-      "maritalStatus":"是",
-      "team":5
     }
 
   ]
