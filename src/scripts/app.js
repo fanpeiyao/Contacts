@@ -44,9 +44,11 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         function img(users){
             var imgList=[];
             imgList.push("resource/images/cover.jpg");
+
             for(var i=0;i<users.length;i++){
-                imgList.push(users[i].photo);
+                imgList.push(users[i].photo,users[i].photoBg);
             }
+            console.log(imgList);
             imgLoader(imgList, function (percentage) {
                 var percentT = parseInt(percentage * 100);
                 document.getElementById('percent').innerHTML=percentT+"%";
