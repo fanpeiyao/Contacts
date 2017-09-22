@@ -172,8 +172,9 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
 .list-detail .close{
     position: absolute;
     top: 10px;
-    left: 10px;
+    right: 10px;
     color: #fff;
+    font-size: 28px;
 }
 .card-son{
     padding: 10px 30px 0 59px !important;
@@ -205,7 +206,7 @@ md-toolbar:not(.md-menu-toolbar).toolbar {
     padding-left:16px;
 }
 .listBox .md-avatar{
-    margin-right:0;
+    margin-right:6px;
 }
 md-list-item.md-no-proxy, md-list-item .md-no-style{
     padding:0px;
@@ -287,7 +288,7 @@ md-list-item.md-no-proxy, md-list-item .md-no-style{
     margin: 0;
     padding: 0;
     position: fixed;
-    right: 16px;
+    left: 16px;
     top: 12px;
     transition: .2s cubic-bezier(.4,0,.2,1);
     width: 0;
@@ -296,8 +297,8 @@ md-list-item.md-no-proxy, md-list-item .md-no-style{
 .search-widget .search-button {
     box-sizing: border-box;
     position: absolute;
-    left: -48px;
     top: -8px;
+    left: -12px;
     color: #fff;
 }
 .search-button, .search-close-button {
@@ -318,7 +319,7 @@ md-list-item.md-no-proxy, md-list-item .md-no-style{
 .search-widget .search-close-button {
     box-sizing: border-box;
     position: absolute;
-    right: -16px;
+    right: -48px;
     top: -8px;
     display: none;
     opacity: 0;
@@ -337,8 +338,9 @@ md-list-item.md-no-proxy, md-list-item .md-no-style{
     padding:5px 16px !important;
 }
 
-
 .search-widget input, .search-widget input[type=text] {
+    position: absolute;
+    left: 36px;
     outline: none;
     box-sizing: border-box;
     border: none;
@@ -372,7 +374,7 @@ md-list-item.md-no-proxy, md-list-item .md-no-style{
     white-space: nowrap;
 }
 .width80{
-    width:80%
+    width:82%
 }
 .width0{
     width:0;
@@ -503,19 +505,3 @@ md-chips{
 .anchorBL{
     display: none;
 }
-@-webkit-keyframes bounce-up {
-    25% {-webkit-transform: translateY(10px);}
-    50%, 100% {-webkit-transform: translateY(0);}
-    75% {-webkit-transform: translateY(-10px);}
-}
-
-@keyframes bounce-up {
-    25% {transform: translateY(10px);}
-    50%, 100% {transform: translateY(0);}
-    75% {transform: translateY(-10px);}
-}
-
-/*.BMap_noprint{*/
-    /*-webkit-animation: bounce-up 1.4s linear infinite;*/
-    /*animation: bounce-up 1.4s linear infinite;*/
-/*}*/

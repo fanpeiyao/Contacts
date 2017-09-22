@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>网金花名册</title>
+    <title>网金交易银行中心技术研发处</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/styles/angular-material.min.css">
@@ -47,7 +47,7 @@
 
                 <md-list-item class="md-2-line list-item son-list "  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
-                        <p   class="userName" ng-bind="user.name"></p>
+                        <p class="userName" ng-bind="user.name"></p>
                     </div>
                     <md-chips>
                         <md-chip ng-bind="user.groupName"></md-chip>
@@ -63,8 +63,7 @@
                     <i class="material-icons close" ng-click="closeDe(i.id)">close</i>
                     <h2 class="mdl-card__title-text" ng-bind="i.name"></h2>
 
-                    <!--<img ng-src="{{i.photo}}" class="md-card-image avatar mdl-shadow&#45;&#45;4dp">-->
-                    <img ng-src="{{i.photoBg}}" src="resource/images/bg.jpg"class="md-card-image  mdl-shadow--2dp">
+                    <img ng-src="{{i.photoBg}}" src="resource/images/bg.jpg" class="md-card-image  mdl-shadow--2dp">
 
                     <div class="demo-card-square mdl-card  list-de-con padding-bottom">
                         <!--电话开始-->
@@ -166,7 +165,7 @@
 
                         <!--地图-->
 
-                        <div id="map{{i.id}}"  list-map coordx='120' coordy='30' style="height: 300px;"></div>
+                        <div id="map{{i.id}}"  list-map  area={{i.liveArea}} style="height: 300px;border-width: 10px 30px 0px 30px;border-style: solid;border-color: #fff;"></div>
 
 
 
@@ -191,9 +190,6 @@
                     </div>
                 </md-fab-actions>
             </md-fab-speed-dial>
-
-
-
 
             <!--右下角按钮-->
             <div class="lock-size" layout="row" layout-align="center center">
