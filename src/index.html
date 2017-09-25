@@ -47,7 +47,7 @@
 
                 <md-list-item class="md-2-line list-item son-list "  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
                     <div class="md-list-item-text" layout="column">
-                        <p   class="userName" ng-bind="user.name"></p>
+                        <p class="userName" ng-bind="user.name"></p>
                     </div>
                     <md-chips>
                         <md-chip ng-bind="user.groupName"></md-chip>
@@ -63,8 +63,7 @@
                     <i class="material-icons close" ng-click="closeDe(i.id)">close</i>
                     <h2 class="mdl-card__title-text" ng-bind="i.name"></h2>
 
-                    <!--<img ng-src="{{i.photo}}" class="md-card-image avatar mdl-shadow&#45;&#45;4dp">-->
-                    <img ng-src="{{i.photoBg}}" src="resource/images/bg.jpg"class="md-card-image  mdl-shadow--2dp">
+                    <img ng-src="{{i.photoBg}}" src="resource/images/bg.jpg" class="md-card-image  mdl-shadow--2dp">
 
                     <div class="demo-card-square mdl-card  list-de-con padding-bottom">
                         <!--电话开始-->
@@ -166,7 +165,7 @@
 
                         <!--地图-->
 
-                        <div id="map{{i.id}}"  list-map coordx={{i.coordX}} coordy={{i.coordY}} style="height: 300px;border-width: 10px 30px 0px 30px;border-style: solid;border-color: #fff;"></div>
+                        <div id="map{{i.id}}"  list-map  area={{i.liveArea}} style="height: 300px;border-width: 10px 30px 0px 30px;border-style: solid;border-color: #fff;"></div>
 
 
 
