@@ -1,0 +1,21 @@
+{
+      "id":23,
+      "name": "谭鑫",
+      "birthday": "10月22日",
+      "mobile":"176-8231-2257",
+      "email":"tanxin@gyj.com",
+      "telephone":"无",
+      "weixin":"t91580",
+      "experience":[{"time":"2016.4-至今","company":"交易银行中心"},{"time":"2014.11-2016.3","company":"软通动力"}],
+      "groupName":"模板制造线",
+      "photo":"resource/images/tx-2.jpg",
+      "photoBg":"resource/images/tx-1.jpg",
+      "post":"研发工程师",
+      "interest":"篮球",
+      "liveArea":"西湖区",
+      "coord-X":"120.136438",
+      "coord-Y":"30.265916",
+      "nativePlace":"湖北 HuBei",
+      "maritalStatus":"是",
+      "team":5
+    }

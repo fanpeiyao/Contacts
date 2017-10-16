@@ -1,0 +1,21 @@
+{
+      "id":10,
+      "name": "林伟",
+      "birthday": "10月24日",
+      "mobile":"134-8619-1229",
+      "email":"linwei@gyj.com",
+      "telephone":"无",
+      "weixin":"yetiandeguanghui",
+      "experience":[{"time":"2017.3-至今","company":"交易银行中心"},{"time":"2015.7-2017.2","company":"越谷科技"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/lw-1.jpg",
+      "photoBg":"resource/images/lw-2.jpg",
+      "interest":"看电影",
+      "liveArea":"滨江",
+      "coord-X":"120.218471",
+      "coord-Y":"30.214333",
+      "nativePlace":"台州 TaiZhou",
+      "maritalStatus":"是",
+      "team":3
+    }

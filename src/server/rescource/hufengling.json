@@ -1,0 +1,22 @@
+      {
+        "id":32,
+        "name": "胡峰令",
+        "pinyin":"hfl",
+        "birthday": "11月03日",
+        "mobile":"135-8840-8661",
+        "email":"hufengling@gyj.com",
+        "telephone":"0571-85135827",
+        "photo":"resource/images/hfl-2.jpg",
+        "photoBg":"resource/images/hfl-1.jpg",
+        "weixin":"13588408661",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"核心层",
+        "post":"研发工程师",
+        "interest":"游戏，篮球",
+        "liveArea":"拱墅区",
+        "coord-X":"120.148447",
+        "coord-Y":"30.324643",
+        "nativePlace":"温州 WenZhou",
+        "maritalStatus":"已婚",
+        "team":1
+      }

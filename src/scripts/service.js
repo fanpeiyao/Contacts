@@ -9,7 +9,7 @@ angular.module("myApp")
             //通过q，可以得到一个承诺promise，而promise会返回当前任务的完成结果
             var obj=q.promise;
 
-            $http({url:"../resource/resource.json",method:"get"}).then(function (e) {
+            $http({url:"resource/resource.json",method:"get"}).then(function (e) {
                 q.resolve(e);
             });
 
@@ -33,7 +33,22 @@ angular.module("myApp")
             return sorts;
         }
 
+        this.getUserList = function(param){
 
+            var deffered = $q.defer();
+            $http({
+                method:"GET",
+                url:"server/getList.php?keyCode=json",
+                headers:{
+                    "Content-Type":"application/x-www-form-urlencoded;charset=UTF-8",
+                }
+                //data:"keyCode="+encodeURIComponent(param)
+            }).then(function(response){
+
+                deffered.resolve(response.data);
+            })
+            return deffered.promise;
+        }
 
     })
 

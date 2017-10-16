@@ -1,0 +1,21 @@
+ {
+      "id":19,
+      "name": "何雪华",
+      "birthday": "11月8日",
+      "mobile":"177-6452-8081",
+      "email":"hexuehua@gyj.com",
+      "telephone":"无",
+      "weixin":"hxh901108",
+      "experience":[{"time":"2014.7-至今","company":"交易银行中心"}],
+      "groupName":"质量管理线",
+      "photo":"resource/images/hxh-2.jpg",
+      "photoBg":"resource/images/hxh-1.jpg",
+      "post":"测试工程师",
+      "interest":"看书",
+      "liveArea":"拱墅区",
+      "coord-X":"120.148447",
+      "coord-Y":"30.324643",
+      "nativePlace":"河南 HeNan",
+      "maritalStatus":"是",
+      "team":6
+    }

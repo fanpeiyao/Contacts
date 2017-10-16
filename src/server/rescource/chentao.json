@@ -1,0 +1,21 @@
+ {
+        "id":9,
+        "name": "陈涛",
+        "birthday": "10月31日",
+        "mobile":"189-6992-2884",
+        "email":"chentao@gyj.com",
+        "telephone":"0571-86505965",
+        "weixin":"chent-zju",
+        "experience":[{"time":"2014-至今","company":"交易银行中心","post":"交互设计线负责人"}],
+        "groupName":"交互设计线",
+        "post":"交互设计线负责人",
+        "photo":"resource/images/ct-2.jpg",
+        "photoBg":"resource/images/ct-1.jpg",
+        "interest":"羽毛球、骑自行车、搓炉石、旅行、看美女",
+        "liveArea":"朝晖",
+        "coord-X":"120.176675",
+        "coord-Y":"30.289663",
+        "nativePlace":"嘉兴 JiaXing",
+        "maritalStatus":"否",
+        "team":3
+      }

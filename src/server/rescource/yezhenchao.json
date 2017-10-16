@@ -1,0 +1,22 @@
+ {
+        "id":18,
+        "name": "叶振超",
+        "pinyin":"yzc",
+        "birthday": "06月17日",
+        "mobile":"135-8883-5868",
+        "email":"yezhenchao@gyj.com",
+        "telephone":"0571-85135971",
+        "weixin":"13588835868",
+        "experience":[{"time":"2011.4-至今","company":"交易银行中心"}],
+        "groupName":"核心层",
+        "photo":"resource/images/yzc-2.jpg",
+        "photoBg":"resource/images/yzc-1.jpg",
+        "post":"研发工程师",
+        "interest":"篮球",
+        "liveArea":"城西",
+        "coordX":"119.942926",
+        "coordY":"30.27631",
+        "nativePlace":"杭州 Hangzhou",
+        "maritalStatus":"已婚",
+        "team":1
+      }

@@ -1,0 +1,21 @@
+ {
+      "id":13,
+      "name": "解扬",
+      "birthday": "8月17日",
+      "mobile":"150-6854-6658",
+      "email":"xieyang@gyj.com",
+      "telephone":"无",
+      "weixin":"15068546658",
+      "experience":[{"time":"2017.9-至今","company":"交易银行中心"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/xy-1.jpg",
+      "photoBg":"resource/images/xy-2.jpg",
+      "interest":"请别人吃饭",
+      "liveArea":"西湖",
+      "coord-X":"120.136438",
+      "coord-Y":"30.265916",
+      "nativePlace":"江苏 JangSu",
+      "maritalStatus":"是",
+      "team":3
+    }

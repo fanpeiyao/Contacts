@@ -1,0 +1,21 @@
+{
+      "id":16,
+      "name": "楼忠平",
+      "birthday": "10月05日",
+      "mobile":"156-6901-7131",
+      "email":"louzhongping@gyj.com",
+      "telephone":"0571-85135958",
+      "weixin":"louzhongping001",
+      "experience":[{"time":"2014.11-至今","company":"交易银行中心"},{"time":"2013.4-2014.4","company":"义务人社局信息中心"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/lzp-1.jpg",
+      "photoBg":"resource/images/lzp-2.jpg",
+      "interest":"看电影、玩电脑",
+      "liveArea":"柯桥",
+      "coord-X":"120.451511",
+      "coord-Y":"30.079004",
+      "nativePlace":"义乌 YiWu",
+      "maritalStatus":"已婚",
+      "team":3
+    }

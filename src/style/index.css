@@ -94,23 +94,12 @@ md-content::-webkit-scrollbar {
     color: rgba(255,255,255,.54);
 }
 .list-detail{
-    position: fixed;
     flex-flow: column wrap;
     background: #fff;
-    top: 50%;
-    left: 50%;
     width: 100%;
     height: 100%;
     overflow: auto;
-    z-index: 1000!important;
-    visibility: hidden;
-    -webkit-font-smoothing: antialiased;
-    -webkit-transform-origin: top center;
-    transform-origin: top center;
-    -webkit-transform: scaleY(0) translate(-50%, -50%);
-    transform: scaleY(0) translate(-50%, -50%);
-    -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+   
 }
 .list-detail.active{
     visibility: visible;

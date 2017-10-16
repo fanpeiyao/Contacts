@@ -1,0 +1,21 @@
+{
+      "id":11,
+      "name": "欧阳昱蓉",
+      "birthday": "5月26日",
+      "mobile":"183-2079-5352",
+      "email":"ouyangyurong@gyj.com",
+      "telephone":"无",
+      "weixin":"18320795352",
+      "experience":[{"time":"2017.2-至今","company":"交易银行中心"},{"time":"2015.7-2017.2","company":"众点互联"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/oy-1.jpg",
+      "photoBg":"resource/images/oy-2.jpg",
+      "interest":"看电影、玩游戏",
+      "liveArea":"下城",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"江西 JangXi",
+      "maritalStatus":"是",
+      "team":3
+    }

@@ -1,9 +1,10 @@
-﻿<?php
+<?php
 		/*
 		* create new json
 		* 
 		*/
 		function createJSON($id,$data){
+			$id=iconv("gb2312","utf-8",$id); 
 			$json_string = json_encode($data);
 			file_put_contents($id.".json",$json_string);
 			
@@ -32,7 +33,7 @@
 					}
 				}
 			}
-			return $result;
+			return $result; 
 		}
 		
 		function getFileContent($filePath){
@@ -46,6 +47,6 @@
 			foreach ($ary as $value) {
 				array_push($result,getFileContent($value));	
 			}
-			return json_encode($result);
+			return $result;
 		}
 ?>
