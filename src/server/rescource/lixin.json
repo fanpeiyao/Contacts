@@ -1,0 +1,21 @@
+ {
+      "id":12,
+      "name": "李鑫",
+      "birthday": "11月06日",
+      "mobile":"138-4935-6665",
+      "email":"lixin@gyj.com",
+      "telephone":"无",
+      "weixin":"13849356665",
+      "experience":[{"time":"2017.8-至今","company":"交易银行中心"},{"time":"2016.5-2017.6","company":"亚达科技"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/lx-1.jpg",
+      "photoBg":"resource/images/lx-2.jpg",
+      "interest":"象棋",
+      "liveArea":"江干",
+      "coord-X":"120.211539",
+      "coord-Y":"30.263311",
+      "nativePlace":"河南 HeNan",
+      "maritalStatus":"否",
+      "team":3
+    }

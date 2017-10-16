@@ -1,0 +1,21 @@
+{
+        "id":17,
+        "name": "季乔卡",
+        "birthday": "06月02日",
+        "mobile":"177-6705-1889",
+        "email":"jiqiaoka@gyj.com",
+        "telephone":"0571-85136195",
+        "weixin":"17767051889",
+        "experience":[{"time":"2014.4-至今","company":"交易银行中心"}],
+        "groupName":"产品经理团队",
+        "post":"研发工程师",
+        "photo":"resource/images/jqk-1.jpg",
+        "photoBg":"resource/images/jqk-2.jpg",
+        "interest":"篮球",
+        "liveArea":"江干",
+        "coord-X":"120.211539",
+        "coord-Y":"30.263311",
+        "nativePlace":"温州 WenZhou",
+        "maritalStatus":"是",
+        "team":3
+      }

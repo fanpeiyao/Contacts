@@ -1,0 +1,21 @@
+{
+        "id":40,
+        "name": "唐伟通",
+        "birthday": "11月03日",
+        "mobile":"158-6847-1886",
+        "email":"tangweitong@gyj.com",
+        "photo":"resource/images/twt-2.jpg",
+        "photoBg":"resource/images/twt-1.jpg",
+        "telephone":"0571-85135857",
+        "weixin":"15868471886",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"技术服务线",
+        "post":"研发工程师",
+        "interest":"羽毛球",
+        "liveArea":"江干区",
+        "coord-X":"120.211539",
+        "coord-Y":"30.263311",
+        "nativePlace":"建德 JianDe",
+        "maritalStatus":"已婚",
+        "team":4
+      }

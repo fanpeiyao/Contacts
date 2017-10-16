@@ -1,0 +1,119 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-dialog-content>
+
+      <section class="list-detail">
+        <i class="material-icons close" ng-click="cancel()">close</i>
+
+
+         <h2 class="mdl-card__title-text" ng-bind="currentUser.name"></h2>
+
+         <img ng-src="{{currentUser.photoBg}}" src="resource/images/bg.jpg" class="md-card-image  mdl-shadow--2dp">
+
+         <div class="demo-card-square mdl-card  list-de-con padding-bottom">
+                        <!--电话开始-->
+                        <div class="mdl-card__title mdl-card--expand ">
+                            <i class="material-icons marginRight color-blue">call</i>
+                            <span class="marginLeft">
+                                <a ng-href="tel:{{currentUser.mobile}}"><div class="color-normal marginBottom" ng-bind="currentUser.mobile"></div></a>
+                                <div class="color-gary">Mobile</div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son">
+                            <span class="width100  card-border card-span">
+                                <a ng-href="tel:{{currentUser.telephone}}" ><div  class="color-normal marginBottom" ng-bind="currentUser.telephone"></div></a>
+                                <div class="color-gary">Work</div>
+                            </span>
+                        </div>
+
+                        <!--邮件区域-->
+                        <div class="mdl-card__title mdl-card--expand ">
+                            <i class="material-icons marginRight color-blue">mail</i>
+                            <span class="marginLeft">
+                                <a ng-href="mailto:{{currentUser.email}}"><div class="color-normal marginBottom"  ng-bind="currentUser.email"></div></a>
+                                <div class="color-gary">Email</div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son newcard-son">
+                            <span class="width100  card-border card-span"></span>
+                        </div>
+
+                        <!--邮件区域-->
+                        <div class="mdl-card__title mdl-card--expand ">
+                            <i class="material-icons marginRight color-blue">person</i>
+                            <span class="marginLeft">
+                                <div class="color-normal marginBottom" ng-bind="currentUser.post"></div>
+                                <div class="color-gary" ng-bind="currentUser.groupName"></div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son newcard-son">
+                            <span class="width100  card-border card-span"></span>
+                        </div>
+                        <!--工作经历-->
+                        <div class="mdl-card__title mdl-card--expand ">
+                            <i class="material-icons marginRight color-blue">work</i>
+                            <span class="marginLeft">
+                                <div class="color-normal marginBottom" ng-bind="currentUser.experience[0].company"></div>
+                                <div class="color-gary" ng-bind="currentUser.experience[0].time"></div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son" ng-repeat="n in currentUser.experience">
+                            <span class="width100  card-border card-span">
+                                <div  class="color-normal marginBottom" ng-bind="n.company"></div>
+                                <div class="color-gary" ng-bind="n.time"></div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son newcard-son">
+                            <span class="width100  card-border card-span"></span>
+                        </div>
+                        <!--基本信息-->
+                        <div class="mdl-card__title mdl-card--expand ">
+                            <i class="material-icons marginRight color-blue">favorite</i>
+                            <span class="marginLeft">
+                                <div class="color-normal marginBottom" ng-bind="currentUser.nativePlace"></div>
+                                <div class="color-gary">籍贯</div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son">
+                            <span class="width100   card-span">
+                                <div  class="color-normal marginBottom" ng-bind="currentUser.birthday"></div>
+                                <div class="color-gary">生日</div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son">
+                            <span class="width100   card-span">
+                                <div  class="color-normal marginBottom" ng-bind="currentUser.interest"></div>
+                                <div class="color-gary">爱好</div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son">
+                            <span class="width100   card-span">
+                                <div  class="color-normal marginBottom" ng-bind="currentUser.maritalStatus"></div>
+                                <div class="color-gary">是否单身</div>
+                            </span>
+                        </div>
+                        <div class="mdl-card__actions  card-son">
+                            <span class="width100  card-border card-span">
+                                <div  class="color-normal marginBottom" ng-bind="currentUser.weixin"></div>
+                                <div class="color-gary">微信号</div>
+                            </span>
+                        </div>
+
+                        <!--电话开始-->
+                        <div class="mdl-card__title mdl-card--expand ">
+                            <i class="material-icons marginRight color-blue">place</i>
+                            <span class="marginLeft">
+                                <div class="color-normal marginBottom">{{currentUser.liveArea}}</div>
+                                <div class="color-gary">居住范围</div>
+                            </span>
+                        </div>
+
+                        <!--地图-->
+
+                        <div id="map{{currentUser.id}}"  list-map  area={{currentUser.liveArea}} style="height: 300px;border-width: 10px 30px 0px 30px;border-style: solid;border-color: #fff;"></div>
+
+                    </div>
+            </section>
+    </md-dialog-content>
+  </form>
+</md-dialog>

@@ -1,0 +1,21 @@
+ {
+        "id":36,
+        "name": "余明哲",
+        "birthday": "01月08日",
+        "mobile":"155-5810-5181",
+        "email":"yumingzhe@gyj.com",
+        "telephone":"0571-85136195",
+        "weixin":"15558105181",
+        "photo":"resource/images/ymz-2.jpg",
+        "photoBg":"resource/images/ymz-1.jpg",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"运维服务线",
+        "post":"研发工程师",
+        "interest":"听音乐，游泳",
+        "liveArea":"下城区",
+        "coord-X":"120.187607",
+        "coord-Y":"30.286744",
+        "nativePlace":"温州 WenZhou",
+        "maritalStatus":"是",
+        "team":7
+      }

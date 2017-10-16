@@ -34,16 +34,18 @@ gulp.task("assets",function(){
 
 //copy files
 gulp.task('copy',function(){
+    gulp.src('src/server/*.php').pipe(gulp.dest('dist/server'));
+    gulp.src('src/server/rescource/*').pipe(gulp.dest('dist/server/rescource'));
     gulp.src('src/resource/*').pipe(gulp.dest('dist/resource'));
     gulp.src('src/resource/images/*').pipe(gulp.dest('dist/resource/images'));
     gulp.src('src/scripts/*').pipe(gulp.dest('dist/scripts'));
     gulp.src('src/style/*').pipe(gulp.dest('dist/style'));
-    gulp.src('src/index.html').pipe(gulp.dest('dist'));
+    gulp.src('src/*.html').pipe(gulp.dest('dist'));
 
 });
 
 gulp.task('watch', function () {
-    gulp.watch(['src/index.html','src/resource/*','src/scripts/*','src/style/*'], ['copy','reload']);
+    gulp.watch(['src/*.html','src/resource/*','src/server/*','src/scripts/*','src/style/*'], ['copy','reload']);
 });
 gulp.task('reload',function () {
     gulp.src('dist').pipe(connect.reload())

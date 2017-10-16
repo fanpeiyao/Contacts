@@ -1,0 +1,21 @@
+{
+      "id":8,
+      "name": "韩燕飞",
+      "birthday": "01月03日",
+      "mobile":"152-5880-4323",
+      "email":"hanyanfei@gyj.com",
+      "telephone":"0571-86505897",
+      "weixin":"15258804323",
+      "experience":[{"time":"2014.02-至今","company":"交易银行中心","post":"视觉设计师"}],
+      "groupName":"交互设计线",
+      "post":"视觉设计师",
+      "photo":"resource/images/hyf-2.jpg",
+      "photoBg":"resource/images/hyf-1.jpg",
+      "interest":"看书",
+      "liveArea":"城西",
+      "coord-X":"119.942926",
+      "coord-Y":"30.27631",
+      "nativePlace":"临安 LinAn",
+      "maritalStatus":"否",
+      "team":3
+    }

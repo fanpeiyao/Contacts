@@ -1,0 +1,21 @@
+{
+      "id":43,
+      "name": "孙冰",
+      "birthday": "10月08日",
+      "mobile":"182-6885-3614",
+      "email":"sunbing@gyj.com",
+      "photo":"resource/images/sb-2.jpg",
+      "photoBg":"resource/images/sb-1.jpg",
+      "telephone":"无",
+      "weixin":"bingge9208",
+      "experience":[{"time":"2016.9-至今","company":"交易银行中心"},{"time":"2015.03-2016.09","company":"网新恒天"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "interest":"足球、篮球",
+      "liveArea":"西湖区",
+      "coord-X":"120.136438",
+      "coord-Y":"30.265916",
+      "nativePlace":"江苏 JangSu",
+      "maritalStatus":"是",
+      "team":8
+    }

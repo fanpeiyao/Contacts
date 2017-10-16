@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>网金交易银行中心技术研发处</title>
+    <title>交易银行中心技术研发处</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="assets/styles/angular-material.min.css">
@@ -39,13 +39,12 @@
 
 
     <div  class="manList">
-
         <md-content class="md-padding content"  layout-xs="column" layout="row" >
-
             <md-list flex ng-repeat="sorts in users track by $index " class="listBox" >
-                <md-subheader class="md-no-sticky son-list "  >{{sorts.sorts}}</md-subheader>
+                <md-subheader class="md-no-sticky son-list"  >{{sorts.sorts}}</md-subheader>
 
-                <md-list-item class="md-2-line list-item son-list "  ng-repeat="user in sorts.details track by $index"  list-active data-id="active_{{user.id}}">
+                <md-list-item class="md-2-line list-item son-list "  ng-repeat="user in sorts.details track by $index"
+                    ng-click="setCurrentUser(user,$event)">
                     <div class="md-list-item-text" layout="column">
                         <p class="userName" ng-bind="user.name"></p>
                     </div>
@@ -54,177 +53,83 @@
                     </md-chips>
                     <img ng-src="{{user.photo}}"  src="resource/images/tx3.jpg"  class="md-avatar" />
                 </md-list-item>
-
             </md-list>
-
-            <!--详细内容-->
-            <div ng-repeat="user in users track by $index" class="secitionBox">
-                <secition class="list-detail" id="active_{{i.id}}"  ng-repeat="i in user.details  track by $index" >
-                    <i class="material-icons close" ng-click="closeDe(i.id)">close</i>
-                    <h2 class="mdl-card__title-text" ng-bind="i.name"></h2>
-
-                    <img ng-src="{{i.photoBg}}" src="resource/images/bg.jpg" class="md-card-image  mdl-shadow--2dp">
-
-                    <div class="demo-card-square mdl-card  list-de-con padding-bottom">
-                        <!--电话开始-->
-                        <div class="mdl-card__title mdl-card--expand ">
-                            <i class="material-icons marginRight color-blue">call</i>
-                            <span class="marginLeft">
-                                <a ng-href="tel:{{i.mobile}}"><div class="color-normal marginBottom" ng-bind="i.mobile"></div></a>
-                                <div class="color-gary">Mobile</div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son">
-                            <span class="width100  card-border card-span">
-                                <a ng-href="tel:{{i.telephone}}" ><div  class="color-normal marginBottom" ng-bind="i.telephone"></div></a>
-                                <div class="color-gary">Work</div>
-                            </span>
-                        </div>
-
-                        <!--邮件区域-->
-                        <div class="mdl-card__title mdl-card--expand ">
-                            <i class="material-icons marginRight color-blue">mail</i>
-                            <span class="marginLeft">
-                                <a ng-href="mailto:{{i.email}}"><div class="color-normal marginBottom"  ng-bind="i.email"></div></a>
-                                <div class="color-gary">Email</div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son newcard-son">
-                            <span class="width100  card-border card-span"></span>
-                        </div>
-
-                        <!--邮件区域-->
-                        <div class="mdl-card__title mdl-card--expand ">
-                            <i class="material-icons marginRight color-blue">person</i>
-                            <span class="marginLeft">
-                                <div class="color-normal marginBottom" ng-bind="i.post"></div>
-                                <div class="color-gary" ng-bind="i.groupName"></div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son newcard-son">
-                            <span class="width100  card-border card-span"></span>
-                        </div>
-                        <!--工作经历-->
-                        <div class="mdl-card__title mdl-card--expand ">
-                            <i class="material-icons marginRight color-blue">work</i>
-                            <span class="marginLeft">
-                                <div class="color-normal marginBottom" ng-bind="i.experience[0].company"></div>
-                                <div class="color-gary" ng-bind="i.experience[0].time"></div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son" ng-repeat="n in i.experience"  ng-if="$index>0">
-                            <span class="width100  card-border card-span">
-                                <div  class="color-normal marginBottom" ng-bind="n.company"></div>
-                                <div class="color-gary" ng-bind="n.time"></div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son newcard-son" ng-if="$index=0">
-                            <span class="width100  card-border card-span"></span>
-                        </div>
-                        <!--基本信息-->
-                        <div class="mdl-card__title mdl-card--expand ">
-                            <i class="material-icons marginRight color-blue">favorite</i>
-                            <span class="marginLeft">
-                                <div class="color-normal marginBottom" ng-bind="i.nativePlace"></div>
-                                <div class="color-gary">籍贯</div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son">
-                            <span class="width100   card-span">
-                                <div  class="color-normal marginBottom" ng-bind="i.birthday"></div>
-                                <div class="color-gary">生日</div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son">
-                            <span class="width100   card-span">
-                                <div  class="color-normal marginBottom" ng-bind="i.interest"></div>
-                                <div class="color-gary">爱好</div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son">
-                            <span class="width100   card-span">
-                                <div  class="color-normal marginBottom" ng-bind="i.maritalStatus"></div>
-                                <div class="color-gary">是否单身</div>
-                            </span>
-                        </div>
-                        <div class="mdl-card__actions  card-son">
-                            <span class="width100  card-border card-span">
-                                <div  class="color-normal marginBottom" ng-bind="i.weixin"></div>
-                                <div class="color-gary">微信号</div>
-                            </span>
-                        </div>
-
-                        <!--电话开始-->
-                        <div class="mdl-card__title mdl-card--expand ">
-                            <i class="material-icons marginRight color-blue">place</i>
-                            <span class="marginLeft">
-                                <div class="color-normal marginBottom">{{i.liveArea}}</div>
-                                <div class="color-gary">居住范围</div>
-                            </span>
-                        </div>
-
-                        <!--地图-->
-
-                        <div id="map{{i.id}}"  list-map  area={{i.liveArea}} style="height: 300px;border-width: 10px 30px 0px 30px;border-style: solid;border-color: #fff;"></div>
-
-
-
-                    </div>
-                </secition>
-            </div>
-
-            <md-fab-speed-dial ng-hide="demo.hidden" md-direction="left" md-open="demo.isOpen"
-                               class="md-scale md-fab-top-right" ng-class="{ 'md-hover-full': demo.hover }"
-                               ng-mouseenter="demo.isOpen=true" ng-mouseleave="demo.isOpen=false">
-
-                <md-fab-actions>
-                    <div ng-repeat="item in items">
-                        <md-button aria-label="{{item.name}}" class="md-fab md-raised md-mini"
-                                   ng-click="demo.openDialog($event, item)">
-                            <md-tooltip md-direction="{{item.direction}}" md-visible="tooltipVisible"
-                                        md-autohide="false" ng-bind="item.name">
-                            </md-tooltip>
-
-                            <md-icon md-svg-src="{{item.icon}}" aria-label="{{item.name}}"></md-icon>
-                        </md-button>
-                    </div>
-                </md-fab-actions>
-            </md-fab-speed-dial>
+        </md-content>
 
             <!--右下角按钮-->
             <div class="lock-size" layout="row" layout-align="center center">
                 <md-fab-speed-dial  md-direction="left" class="md-scale" md-open="showIcon" ng-click="showIcon = !showIcon">
                     <md-fab-trigger >
-                        <md-button  aria-label="menu" class="md-fab md-warn"  >
-                            <i class="material-icons menuIcon" aria-label="menu"></i>
+                        <md-button class="md-fab md-warn"  >
+                            <i class="material-icons menuIcon"></i>
                         </md-button>
                     </md-fab-trigger>
 
                     <md-fab-actions ng-show="showIcon" class="zoomIn animated">
                         <div class="md-fab-action-item" ng-class="{'scaleIn': showIcon,'scaleOut':!showIcon}"  ng-repeat="icon in sortsIcon">
-                            <md-button  aria-label="{{icon.iconName}}" class="md-fab md-raised md-mini" >
-                                <md-icon  aria-label="{{icon.iconName}}" ng-click="switch(icon.name)"><i class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
+                            <md-button  class="md-fab md-raised md-mini" >
+                                <md-icon  ng-click="switch(icon.name)"><i class="switchSort material-icons" ng-class="{'color-pink': icon.pink}" >{{icon.iconName}}</i></md-icon>
                             </md-button>
                         </div>
                     </md-fab-actions>
                 </md-fab-speed-dial>
             </div>
 
-        </md-content>
-
-
+            
     </div>
 </div>
 
+<script src="scripts/imgLoader.js"></script>
+<script>
+
+    var loadingList=[];
+    loadingList.push("assets/js/angular.min.js");
+    loadingList.push("scripts/material.min.js");
+    loadingList.push("resource/images/cover.jpg");
+
+    //get lists
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET","server/getList.php?keyCode=list",false);
+    xhr.send();
+    if (xhr.readyState==4 && xhr.status==200)
+    {
+        var result = eval(xhr.responseText);
+        for(var i =0;i<result.length;i++){
+            result[i] = result[i].replace("rescource\\","");
+            result[i] = result[i].replace(".json","");
+        }
+        
+        for(var i=0;i<result.length;i++){
+            loadingList.push(result[i]+".jpg");
+            loadingList.push(result[i]+"-detail.jpg");
+        }
+    }
+
+    var percent = document.getElementById("percent");
+    imgLoader(loadingList, function (percentage) {
+                var percentT = parseInt(percentage * 100);
+                percent.innerHTML=percentT+"%";
+                if (parseInt(percentT) == 100) {
+                    document.getElementById('loading').style.display='none';
+                    var cover = document.getElementById('coverPic');
+                    cover.style.display='block';
+                    setTimeout(function(){
+                        document.getElementById('cover').setAttribute("class","fadeOut");
+                        setTimeout(function(){
+                            document.getElementById('cover').style.display="none";
+                        },1200);
+                    },2000);
+                }
+            });
+
+</script>
+
 <script src="assets/js/angular.min.js"></script>
 <script src="scripts/material.min.js"></script>
-<script src="scripts/imgLoader.js"></script>
 <script src="scripts/app.js"></script>
-<script src="scripts/PinYin.js"></script>
+<script src="scripts/sort.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=l6nvGEPwZapKs3Gu19Kkl2aBZLPdF7II	"></script>
-
 <script src="scripts/directive.js"></script>
 <script src="scripts/service.js"></script>
-
 </body>
 </html>

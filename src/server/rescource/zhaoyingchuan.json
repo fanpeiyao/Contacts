@@ -1,0 +1,22 @@
+{
+        "id":33,
+        "name": "赵颖川",
+        "pinyin":"zyc",
+        "birthday": "03月02日",
+        "mobile":"138-1919-1602",
+        "email":"zhaoyc@gyj.com",
+        "telephone":"0571-85135970",
+        "photo":"resource/images/zyc-2.jpg",
+        "photoBg":"resource/images/zyc-1.jpg",
+        "weixin":"13819191602",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"核心层",
+        "post":"研发工程师",
+        "interest":"乒乓球，游泳",
+        "liveArea":"江干区",
+        "coordX":"120.211539",
+        "coordY":"30.263311",
+        "nativePlace":"杭州 Hangzhou",
+        "maritalStatus":"已婚",
+        "team":1
+      }

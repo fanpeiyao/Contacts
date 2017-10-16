@@ -1,0 +1,21 @@
+{
+        "id":37,
+        "name": "李重颉",
+        "birthday": "08月19日",
+        "mobile":"135-8832-9151",
+        "email":"lichongjie@gyj.com",
+        "telephone":"0571-85135826",
+        "photo":"resource/images/lcj-2.jpg",
+        "photoBg":"resource/images/lcj-1.jpg",
+        "weixin":"13588329151",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"模板制造线",
+        "post":"研发工程师",
+        "interest":"篮球",
+        "liveArea":"滨江区",
+        "coord-X":"120.218471",
+        "coord-Y":"30.214333",
+        "nativePlace":"杭州 Hangzhou",
+        "maritalStatus":"已婚",
+        "team":5
+      }

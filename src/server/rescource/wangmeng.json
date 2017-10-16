@@ -1,0 +1,22 @@
+ {
+      "id":4,
+      "name": "王萌",
+      "birthday": "9月9日",
+      "mobile":"156-5811-6968",
+      "email":"wangmeng@gyj.com",
+      "telephone":"无",
+      "weixin":"15658116968",
+      "experience":[{"time":"2016.6-至今","company":"交易银行中心","post":"前端开发"},
+        {"time":"2014.5-2016.5","company":"青岛青软","post":"前端开发"}],
+      "groupName":"交互设计线",
+      "post":"前端开发",
+      "photo":"resource/images/wm-2.jpg",
+      "photoBg":"resource/images/wm-1.jpg",
+      "interest":"爬山",
+      "liveArea":"下城区",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"保定 Baoding",
+      "maritalStatus":"否",
+      "team":3
+    }

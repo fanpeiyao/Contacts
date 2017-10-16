@@ -1,0 +1,21 @@
+{
+      "id":5,
+      "name": "詹利康",
+      "birthday": "03月24日",
+      "mobile":"157-5710-6522",
+      "telephone":"无",
+      "email":"zhanlikang@gyj.com",
+      "weixin":"15757106522",
+      "experience":[{"time":"2016.6-至今","company":"交易银行中心","post":"java开发"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/zlk.jpg",
+      "photoBg":"resource/images/zlk-2.jpg",
+      "interest":"唱歌",
+      "liveArea":"下城区",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"东阳 DongYang",
+      "maritalStatus":"是",
+      "team":2
+    }
