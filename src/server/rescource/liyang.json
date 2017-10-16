@@ -1,0 +1,21 @@
+{
+      "id":28,
+      "name": "李阳",
+      "birthday": "01月07日",
+      "mobile":"187-3873-9682",
+      "email":"liyang@gyj.com",
+      "photo":"resource/images/ly-2.jpg",
+      "photoBg":"resource/images/ly-1.jpg",
+      "telephone":"无",
+      "weixin":"lyssgtc",
+      "experience":[{"time":"2017.08-至今","company":"交易银行中心"},{"time":"2017.02-2017.08","company":"杭州工行研修院"},{"time":"2015.07-2017.02","company":"宁波银行"}],
+      "groupName":"质量管理线",
+      "post":"测试工程师",
+      "interest":"乒乓球",
+      "liveArea":"下城区",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"山东 ShanDong",
+      "maritalStatus":"是",
+      "team":6
+    }

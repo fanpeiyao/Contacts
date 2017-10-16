@@ -1,0 +1,21 @@
+{
+      "id":7,
+      "name": "楼晗芝",
+      "birthday": "08月15日",
+      "mobile":"150-5790-3173",
+      "email":"louhanzhi@gyj.com",
+      "telephone":"0571-86505964",
+      "weixin":"angelasister_han",
+      "experience":[{"time":"2014.06-至今","company":"交易银行中心","post":"视觉设计师"}],
+      "groupName":"交互设计线",
+      "post":"视觉设计师",
+      "photo":"resource/images/lhz-2.jpg",
+      "photoBg":"resource/images/lhz-1.jpg",
+      "interest":"购物、瑜伽",
+      "liveArea":"城东",
+      "coord-X":"120.245604",
+      "coord-Y":"30.3076",
+      "nativePlace":"义乌 YiWu",
+      "maritalStatus":"否",
+      "team":3
+    }

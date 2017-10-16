@@ -1,0 +1,21 @@
+{
+      "id":1,
+      "name": "李睿颖",
+      "birthday": "07月13日",
+      "mobile":"135-7578-4177",
+      "email":"liruiying@gyj.com",
+      "telephone":"0571-86505992",
+      "weixin":"liruiying0713",
+      "experience":[{"time":"2016.10-至今","company":"交易银行中心","post":"视觉设计师"}],
+      "groupName":"交互设计线",
+      "post":"视觉设计师",
+      "photo":"resource/images/lry-2.jpg",
+      "photoBg":"resource/images/lry-1.jpg",
+      "interest":"摄影、旅游",
+      "liveArea":"拱墅区",
+      "coord-X":"120.148447",
+      "coord-Y":"30.324643",
+      "nativePlace":"杭州 HangZhou",
+      "maritalStatus":"否",
+      "team":3
+    }

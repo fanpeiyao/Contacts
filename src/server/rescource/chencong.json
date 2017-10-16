@@ -1,0 +1,21 @@
+ {
+        "id":45,
+        "name": "陈聪",
+        "birthday": "10月24日",
+        "mobile":"134-2966-5900",
+        "email":"chencong@gyj.com",
+        "telephone":"0571-85135829",
+        "photo":"resource/images/   -2.jpg",
+        "photoBg":"resource/images/cc-1.jpg",
+        "weixin":"13429665900",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"产品经理团队",
+        "post":"研发工程师",
+        "interest":"兴趣广泛",
+        "liveArea":"江干区",
+        "coord-X":"120.211539",
+        "coord-Y":"30.263311",
+        "nativePlace":"金华 JinHua",
+        "maritalStatus":"已婚",
+        "team":8
+      }

@@ -1,0 +1,21 @@
+{
+      "id":29,
+      "name": "王晨",
+      "birthday": "09月08日",
+      "mobile":"187-1071-2393",
+      "email":"wangchen@gyj.com",
+      "telephone":"0571-85135856",
+      "photo":"resource/images/wc-2.jpg",
+      "photoBg":"resource/images/wc-1.jpg",
+      "weixin":"18710712393",
+      "experience":[{"time":"2014.09-至今","company":"交易银行中心"}],
+      "groupName":"技术服务线",
+      "post":"研发工程师",
+      "interest":"乒乓球",
+      "liveArea":"下城区",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"陕西 ShanXi",
+      "maritalStatus":"已婚",
+      "team":4
+    }

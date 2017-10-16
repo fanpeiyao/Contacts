@@ -1,0 +1,21 @@
+{
+      "id":30,
+      "name": "石浩炎",
+      "birthday": "01月05日",
+      "mobile":"137-3580-1110",
+      "email":"shi_hy@gyj.com",
+      "telephone":"0571-85135696",
+      "photo":"resource/images/shy-2.jpg",
+      "photoBg":"resource/images/shy-1.jpg",
+      "weixin":"13735801110",
+      "experience":[{"time":"2014.09-至今","company":"交易银行中心"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "interest":"看电影，乒乓球",
+      "liveArea":"上城区",
+      "coord-X":"120.175579",
+      "coord-Y":"30.248398",
+      "nativePlace":"新昌 XinChang",
+      "maritalStatus":"已婚",
+      "team":2
+    }

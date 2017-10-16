@@ -1,0 +1,21 @@
+{
+      "id":41,
+      "name": "张文平",
+      "birthday": "11月03日",
+      "mobile":"150-6719-7971",
+      "email":"zhangwenping@gyj.com",
+      "photo":"resource/images/zwp-2.jpg",
+      "photoBg":"resource/images/zwp-1.jpg",
+      "telephone":"无",
+      "weixin":"15067197971",
+      "experience":[{"time":"2016.5-至今","company":"交易银行中心"},{"time":"2015.06-2016.06","company":"湖北荆州"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "interest":"听音乐，看电视，爬山",
+      "liveArea":"江干区",
+      "coord-X":"120.211539",
+      "coord-Y":"30.263311",
+      "nativePlace":"河南 HeNan",
+      "maritalStatus":"是",
+      "team":8
+    }

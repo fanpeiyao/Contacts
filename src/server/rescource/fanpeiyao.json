@@ -1,0 +1,21 @@
+{
+      "id":2,
+      "name": "范佩瑶",
+      "birthday": "05月15日",
+      "mobile":"183-3479-7665",
+      "email":"fanpeiyao@gyj.com",
+      "telephone":"0571-85135986",
+      "weixin":"darin159357",
+      "experience":[{"time":"2016.10-至今","company":"交易银行中心","post":"前端开发"}],
+      "groupName":"交互设计线",
+      "post":"前端开发",
+      "photo":"resource/images/fpy-2.jpg",
+      "photoBg":"resource/images/fpy-1.jpg",
+      "interest":"猫、笑话",
+      "liveArea":"下城区",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"山西 ShanXi",
+      "maritalStatus":"是",
+      "team":3
+    }

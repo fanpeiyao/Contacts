@@ -1,0 +1,21 @@
+{
+        "id":35,
+        "name": "朱伟武",
+        "birthday": "10月21日",
+        "mobile":"159-5811-5039",
+        "email":"zhuweiwu@gyj.com",
+        "telephone":"0571-85135833",
+        "weixin":"569882908@qq.com",
+        "photo":"resource/images/zww-2.jpg",
+        "photoBg":"resource/images/zww-1.jpg",
+        "experience":[{"time":"2017.9-至今","company":"交易银行中心"},{"time":"2014.4-2017.8","company":"网金科研"}],
+        "groupName":"质量管理线",
+        "post":"研发工程师",
+        "interest":"书、游戏",
+        "liveArea":"滨江区",
+        "coord-X":"120.218471",
+        "coord-Y":"30.214333",
+        "nativePlace":"台州 Taizhou",
+        "maritalStatus":"是",
+        "team":6
+      }

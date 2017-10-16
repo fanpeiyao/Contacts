@@ -1,0 +1,21 @@
+{
+      "id":6,
+      "name": "邱普",
+      "birthday": "05月15日",
+      "mobile":"188-9551-7192",
+      "telephone":"无",
+      "email":"qiupu@gyj.com",
+      "weixin":"qp188288188",
+      "experience":[{"time":"2014-至今","company":"交易银行中心","post":"java开发"}],
+      "groupName":"产品经理团队",
+      "post":"研发工程师",
+      "photo":"resource/images/qp-1.jpg",
+      "photoBg":"resource/images/qp-2.jpg",
+      "interest":"篮球、跑步",
+      "liveArea":"下城区",
+      "coord-X":"120.187607",
+      "coord-Y":"30.286744",
+      "nativePlace":"江苏 JangSu",
+      "maritalStatus":"是",
+      "team":2
+    }
