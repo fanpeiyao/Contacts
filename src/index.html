@@ -44,7 +44,7 @@
                 <md-subheader class="md-no-sticky son-list"  >{{sorts.sorts}}</md-subheader>
 
                 <md-list-item class="md-2-line list-item son-list "  ng-repeat="user in sorts.details track by $index"
-                    ng-click="setCurrentUser(user,$event)">
+                    ng-click="setCurrentUser(user,$event)" aria-label="user.name">
                     <div class="md-list-item-text" layout="column">
                         <p class="userName" ng-bind="user.name"></p>
                     </div>
@@ -100,8 +100,8 @@
         }
         
         for(var i=0;i<result.length;i++){
-            loadingList.push(result[i]+".jpg");
-            loadingList.push(result[i]+"-detail.jpg");
+            loadingList.push("resource/images/"+result[i]+".jpg");
+            loadingList.push("resource/images/"+result[i]+"-detail.jpg");
         }
     }
 
@@ -129,7 +129,6 @@
 <script src="scripts/app.js"></script>
 <script src="scripts/sort.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=l6nvGEPwZapKs3Gu19Kkl2aBZLPdF7II	"></script>
-<script src="scripts/directive.js"></script>
 <script src="scripts/service.js"></script>
 </body>
 </html>
