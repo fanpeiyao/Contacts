@@ -101,13 +101,13 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
             for (var i=0;i<newUser.length;i++){
                 $scope.users.push(newUser[i]);
             };
-            requestAnimationFrame(function() {
-                for (var i=0;i<10;i++){
-                    time = (i*100+100)+'ms';
-                    lists[i].classList.add('fadeInUpBig');
-                    lists[i].style.animationDelay = time;
-                };
-            })
+            // requestAnimationFrame(function() {
+            //     for (var i=0;i<10;i++){
+            //         time = (i*100+100)+'ms';
+            //         lists[i].classList.add('fadeInUpBig');
+            //         lists[i].style.animationDelay = time;
+            //     };
+            // })
         }
 
         //获取排序按钮
