@@ -95,7 +95,7 @@
     {
         var result = eval(xhr.responseText);
         for(var i =0;i<result.length;i++){
-            result[i] = result[i].replace("rescource\\","");
+            result[i] = result[i].replace("rescource/","").replace("rescource\\","");
             result[i] = result[i].replace(".json","");
         }
         

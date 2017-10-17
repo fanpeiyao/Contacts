@@ -2,10 +2,59 @@
 
 <html>
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <title>花名册维护</title>
+
 </head>
 <body>
 
-	
+	<h1>添加用户</h1>
+	<div id="form">
+		<p><label>姓名</label><input type = "text" id="name"></p>
+		<p><label>生日</label><input type = "date" id="birthday"></p>
+		<p><label>手机</label><input type = "tel" id="mobile"></p>
+		<p><label>微信号</label><input type = "text"  id="weixin"></p>
+		<p><label>邮箱</label><input type = "email" id="email"></p>
+		<p><label>电话</label><input type = "tel" id="telephone"></p>
 
+		<p><label>职位</label><input type = "text" id="post"></p>
+		<p><label>所属团队</label>
+			<select id="groupName">
+				<option>运维保障线</option>
+				<option>模板制造线</option>
+				<option>技术服务线</option>
+				<option>交互设计线</option>
+				<option>质量管理线</option>
+				<option>掘金队</option>
+				<option>人本队</option>
+				<option>影锋队</option>
+				<option>开拓队</option>
+				<option>致远队</option>
+			</select>
+		</p>
+		<p><label>家乡</label><input type ="text" id="nativePlace"></p>
+		<p><label>是否已婚</label><input type= "text" id="maritalStatus"></p>
+		<p><label>居住区域</label><input type = "text" id="liveArea"></p>
+		<p><label>兴趣爱好</label><textarea id="experience"></textarea></p>
+		<p><label>工作经历</label><textarea id="interest"></textarea></p>
+
+
+		<p><label>头像</label><input type = "file" name = "photo"></p>
+		<p><label>照片</label><input type = "file" name = "photoBg"></p>
+		
+		<button>添加</button>
+	</div>
+
+	<script src="scripts/jquery.min.js"></script>
+	<script>
+		
+		$(function(){
+			$("button").on("click",function(event){
+				var form = $("#form");
+			})
+		})
+
+	</script>
 </body>
 </html>
