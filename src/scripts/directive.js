@@ -14,7 +14,6 @@ angular.module('myApp')
                     //ios端tabbar样式不能删除
                     var bar = document.getElementsByClassName('toolbar')[0];
                     bar.style.display='none';
-
                     angular.element(this).find('.md-card-image').addClass('aa');
                 })
             }
