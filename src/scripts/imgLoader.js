@@ -9,7 +9,7 @@
      * @param timeout 每个图片加载的超时时间，默认为5s
      */
     var loader = function (imgList, callback, timeout) {
-        timeout = timeout || 2700;
+        timeout = timeout || 1000;
         imgList = isArray(imgList) && imgList || [];
         callback = typeof(callback) === 'function' && callback;
 
