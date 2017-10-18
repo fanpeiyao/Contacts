@@ -22,6 +22,7 @@ var myApp = angular.module("myApp",['ngMaterial','ngAria','ngAnimate'])
         $scope.on_clear=function () {
             $scope.searchText=null;
             $scope.clickIcon = false;
+            sort($scope.userList);
         };
 
         //实现查询功能
